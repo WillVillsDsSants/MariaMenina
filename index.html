@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Castelo dos Bolos — Bolos personalizados para momentos inesquecíveis</title>
+  <meta name="description" content="Confeitaria especializada em bolos personalizados, docinhos, bolo no pote e morango do amor. Alto padrão de qualidade e segurança alimentar. Encomendas sob consulta." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="inicio">
+    <div class="confeitos" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <nav class="nav container">
+      <a href="#inicio" class="nav__logo" aria-label="Castelo dos Bolos — início">
+        <span class="nav__logo-circle">
+          <svg viewBox="0 0 40 40" width="30" height="30" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10 31 V19 h4 v-3 h3 v3 h6 v-3 h3 v3 h4 v12 z"/>
+              <path d="M18 31 v-4.5 a2 2 0 0 1 4 0 V31"/>
+              <path d="M17 16 v-4 h6 v4"/>
+              <path d="M20 12 V6.5 l3.5 1.3 -3.5 1.3"/>
+              <path d="M12 12.5 c -0.9 -1.2 0.5 -2.5 1.3 -1.4 c 0.8 -1.1 2.2 0.2 1.3 1.4 l -1.3 1.3 z" fill="currentColor" stroke="none"/>
+              <path d="M28 11 l0.6 1.3 1.4 0.2 -1 1 0.2 1.4 -1.2 -0.7 -1.2 0.7 0.2 -1.4 -1 -1 1.4 -0.2 z" fill="currentColor" stroke="none"/>
+            </g>
+          </svg>
+        </span>
+        <span class="nav__logo-text">Castelo dos Bolos</span>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="#inicio" class="nav__link nav__link--active">Início</a></li>
+        <li><a href="#catalogo" class="nav__link">Catálogo</a></li>
+        <li><a href="#sobre" class="nav__link">Sobre</a></li>
+        <li><a href="#contato" class="nav__link">Contato</a></li>
+      </ul>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero container">
+      <div class="hero__content">
+        <span class="hero__chip">♛ Confeitaria especializada em bolos personalizados</span>
+        <h1 class="hero__title">Castelo dos Bolos</h1>
+        <p class="hero__subtitle">Momentos inesquecíveis merecem um bolo à altura</p>
+        <p class="hero__text">
+          Do aniversário infantil ao casamento, do chá revelação à festa de 15 anos:
+          criamos o bolo perfeito para a sua comemoração, com alto padrão de
+          qualidade, segurança alimentar e muito capricho artesanal.
+        </p>
+        <div class="hero__acoes">
+          <a href="#contato" class="btn btn--principal">Encomende agora</a>
+          <a href="#catalogo" class="btn btn--ghost">Ver catálogo</a>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <!-- Letreiro rolante -->
+  <div class="faixa" aria-hidden="true">
+    <div class="faixa__trilho">
+      <span>Bolos personalizados</span><span>✦</span><span>Docinhos</span><span>✦</span><span>Bolo no pote</span><span>✦</span><span>Morango do amor</span><span>✦</span><span>Kits festa</span><span>✦</span>
+      <span>Bolos personalizados</span><span>✦</span><span>Docinhos</span><span>✦</span><span>Bolo no pote</span><span>✦</span><span>Morango do amor</span><span>✦</span><span>Kits festa</span><span>✦</span>
+    </div>
+  </div>
+
+  <main>
+    <!-- ===== VITRINE DE CARDS ===== -->
+    <section class="vitrine section" id="vitrine">
+      <div class="container">
+        <h2 class="section__title">Nossas especialidades</h2>
+        <p class="section__subtitle">Cada encomenda é feita sob medida para a sua festa</p>
+
+        <svg class="floral floral--tr" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+          <path d="M14 108 C 40 84, 58 58, 66 24"/>
+          <path d="M52 62 c -14 -4 -20 -14 -20 -24 c 12 2 20 12 20 24 z"/>
+          <path d="M58 44 c 12 -8 24 -8 32 -2 c -8 8 -22 10 -32 2 z"/>
+          <circle cx="70" cy="18" r="4"/>
+          <path d="M70 6 v4 M70 30 v-4 M58 18 h4 M82 18 h-4 M61 9 l3 3 M79 27 l-3 -3 M79 9 l-3 3 M61 27 l3 -3"/>
+        </svg>
+        <svg class="floral floral--bl" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+          <path d="M14 108 C 40 84, 58 58, 66 24"/>
+          <path d="M52 62 c -14 -4 -20 -14 -20 -24 c 12 2 20 12 20 24 z"/>
+          <path d="M58 44 c 12 -8 24 -8 32 -2 c -8 8 -22 10 -32 2 z"/>
+          <circle cx="70" cy="18" r="4"/>
+          <path d="M70 6 v4 M70 30 v-4 M58 18 h4 M82 18 h-4 M61 9 l3 3 M79 27 l-3 -3 M79 9 l-3 3 M61 27 l3 -3"/>
+        </svg>
+
+        <div class="numeros">
+          <div class="numero"><span class="numero__valor">+1.000</span><span class="numero__label">bolos entregues</span></div>
+          <div class="numero"><span class="numero__valor">5★</span><span class="numero__label">de avaliação dos clientes</span></div>
+          <div class="numero"><span class="numero__valor">100%</span><span class="numero__label">personalizado e artesanal</span></div>
+        </div>
+
+        <div class="vitrine__grid">
+          <article class="card">
+            <div class="card__img cake-photo">
+              <span class="selo">Mais pedido</span>
+              <img src="https://images.unsplash.com/photo-1602351447937-745cb720612f?w=700&q=80&auto=format&fit=crop" alt="Bolo personalizado decorado" loading="lazy" onerror="this.remove()" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Bolos Personalizados</h3>
+              <p class="card__text">O tema que você imaginar, do infantil ao casamento, feito sob medida.</p>
+              <a href="#catalogo" class="card__link" aria-label="Ver bolos personalizados">→</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__img cake-photo">
+              <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=700&q=80&auto=format&fit=crop" alt="Bolo no pote em camadas" loading="lazy" onerror="this.remove()" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Bolo no Pote</h3>
+              <p class="card__text">Camadas generosas de bolo e recheio, prontas para adoçar o seu dia.</p>
+              <a href="#catalogo" class="card__link" aria-label="Ver bolos no pote">→</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__img cake-photo">
+              <img src="https://images.unsplash.com/photo-1542826438-bd32f43d626f?w=700&q=80&auto=format&fit=crop" alt="Morango do amor" loading="lazy" onerror="this.remove()" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Morango do Amor</h3>
+              <p class="card__text">O queridinho do momento: morango fresco envolto em calda crocante.</p>
+              <a href="#catalogo" class="card__link" aria-label="Ver morango do amor">→</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__img cake-photo">
+              <img src="https://images.unsplash.com/photo-1519869325930-281384150729?w=700&q=80&auto=format&fit=crop" alt="Docinhos e brigadeiros artesanais" loading="lazy" onerror="this.remove()" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Docinhos &amp; Brigadeiros</h3>
+              <p class="card__text">Brigadeiros, beijinhos e doces finos enrolados um a um, à mão.</p>
+              <a href="#catalogo" class="card__link" aria-label="Ver docinhos">→</a>
+            </div>
+          </article>
+
+          <article class="card card--destaque">
+            <div class="card__img cake-photo">
+              <img src="https://images.unsplash.com/photo-1587668178277-295251f900ce?w=700&q=80&auto=format&fit=crop" alt="Kit festa completo" loading="lazy" onerror="this.remove()" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Kits Festa</h3>
+              <p class="card__text">Bolo e docinhos combinados: a festa completa saindo do nosso castelo.</p>
+              <a href="#catalogo" class="card__link" aria-label="Ver kits festa">→</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__img cake-photo">
+              <img src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?w=700&q=80&auto=format&fit=crop" alt="Doces finos para encomenda" loading="lazy" onerror="this.remove()" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Encomendas</h3>
+              <p class="card__text">Encomendas sob consulta pelo WhatsApp: garanta a data da sua festa.</p>
+              <a href="#contato" class="card__link" aria-label="Fazer encomenda">→</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CATÁLOGO ===== -->
+    <section class="catalogo section" id="catalogo">
+      <div class="container">
+        <h2 class="section__title">Nosso catálogo</h2>
+
+        <svg class="floral floral--tr" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+          <path d="M14 108 C 40 84, 58 58, 66 24"/>
+          <path d="M52 62 c -14 -4 -20 -14 -20 -24 c 12 2 20 12 20 24 z"/>
+          <path d="M58 44 c 12 -8 24 -8 32 -2 c -8 8 -22 10 -32 2 z"/>
+          <circle cx="70" cy="18" r="4"/>
+          <path d="M70 6 v4 M70 30 v-4 M58 18 h4 M82 18 h-4 M61 9 l3 3 M79 27 l-3 -3 M79 9 l-3 3 M61 27 l3 -3"/>
+        </svg>
+        <svg class="floral floral--bl" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+          <path d="M14 108 C 40 84, 58 58, 66 24"/>
+          <path d="M52 62 c -14 -4 -20 -14 -20 -24 c 12 2 20 12 20 24 z"/>
+          <path d="M58 44 c 12 -8 24 -8 32 -2 c -8 8 -22 10 -32 2 z"/>
+          <circle cx="70" cy="18" r="4"/>
+          <path d="M70 6 v4 M70 30 v-4 M58 18 h4 M82 18 h-4 M61 9 l3 3 M79 27 l-3 -3 M79 9 l-3 3 M61 27 l3 -3"/>
+        </svg>
+
+        <div class="catalogo__tabs" role="tablist" aria-label="Categorias do catálogo">
+          <button class="catalogo__tab catalogo__tab--active" data-tab="bolos" role="tab" aria-selected="true">Bolos</button>
+          <button class="catalogo__tab" data-tab="docinhos" role="tab" aria-selected="false">Docinhos</button>
+          <button class="catalogo__tab" data-tab="especiais" role="tab" aria-selected="false">No Pote &amp; Especiais</button>
+        </div>
+
+        <div class="catalogo__layout">
+          <aside class="recheios">
+            <h3 class="recheios__title">Recheios</h3>
+            <p class="recheios__text">Monte o bolo perfeito com o seu recheio preferido</p>
+            <ul class="recheios__list">
+              <li>Ninho com morango</li>
+              <li>Chocolate com brigadeiro</li>
+              <li>Doce de leite</li>
+              <li>Prestígio</li>
+              <li>Maracujá</li>
+              <li>Quatro leites</li>
+            </ul>
+            <p class="recheios__obs">e muitos outros sob consulta</p>
+            <a href="#contato" class="btn btn--outline-light">Encomendar</a>
+          </aside>
+
+          <div class="catalogo__panels">
+            <div class="catalogo__grid catalogo__panel catalogo__panel--active" data-panel="bolos">
+              <figure class="produto">
+                <div class="cake-photo cake-photo--sq">
+                  <img src="https://images.unsplash.com/photo-1602351447937-745cb720612f?w=700&q=80&auto=format&fit=crop" alt="Bolo personalizado" loading="lazy" onerror="this.remove()" />
+                </div>
+                <figcaption>Bolo Personalizado<span class="produto__preco">sob consulta</span></figcaption>
+              </figure>
+              <figure class="produto">
+                <div class="cake-photo cake-photo--sq">
+                  <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=700&q=80&auto=format&fit=crop" alt="Bolo de chocolate com brigadeiro" loading="lazy" onerror="this.remove()" />
+                </div>
+                <figcaption>Bolo de Chocolate<span class="produto__preco">R$ 110</span></figcaption>
+              </figure>
+              <figure class="produto">
+                <div class="cake-photo cake-photo--sq">
+                  <span class="selo">Queridinho</span>
+                  <img src="https://images.unsplash.com/photo-1562777717-dc6984f65a63?w=700&q=80&auto=format&fit=crop" alt="Bolo de dois andares" loading="lazy" onerror="this.remove()" />
+                </div>
+                <figcaption>Bolo 2 Andares<span class="produto__preco">a partir de R$ 260</span></figcaption>
+              </figure>
+              <figure class="produto">
+                <div class="cake-photo cake-photo--sq">
+                  <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=700&q=80&auto=format&fit=crop" alt="Bolo de frutas vermelhas" loading="lazy" onerror="this.remove()" />
+                </div>
+                <figcaption>Bolo de Frutas Vermelhas<span class="produto__preco">R$ 135</span></figcaption>
+              </figure>
+              <figure class="produto">
+                <div class="cake-photo cake-photo--sq">
+                  <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=700&q=80&auto=format&fit=crop" alt="Bolo para chá revelação" loading="lazy" onerror="this.remove()" />
+                </div>
+                <figcaption>Chá Revelação<span class="produto__preco">sob consulta</span></figcaption>
+              </figure>
+              <figure class="produto">
+                <div class="cake-photo cake-photo--sq">
+                  <img src="https://images.unsplash.com/photo-1558636508-e0db3814bd1d?w=700&q=80&auto=format&fit=crop" alt="Bolo caseiro" loading="lazy" onerror="this.remove()" />
+                </div>
+                <figcaption>Bolo Caseiro<span class="produto__preco">R$ 55</span></figcaption>
+              </figure>
+            </div>
+
+            <div class="catalogo__grid catalogo__panel" data-panel="docinhos">
+              <figure class="produto">
+                <div class="cake-photo cake-photo--sq">
+                  <img src="https://images.unsplash.com/photo-1519869325930-281384150729?w=700&q=80&auto=format&fit=crop" alt="Brigadeiro gourmet" loading="lazy" onerror="this.remove()" />
+                </div>
+                <figcaption>Brigadeiro Gourmet<span class="produto__preco">R$ 3,50 un.</span></figcaption>
+              </figure>
+              <figure class="produto">
+                <div class="cake-photo cake-photo--sq">
+                  <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=700&q=80&auto=format&fit=crop" alt="Beijinho de coco" loading="lazy" onerror="this.remove()" />
+                </div>
+                <figcaption>Beijinho de Coco<span class="produto__preco">R$ 3,50 un.</span></figcaption>
+              </figure>
+              <figure class="produto">
+                <div class="cake-photo cake-photo--sq">
+                  <img src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?w=700&q=80&auto=format&fit=crop" alt="Bem-casado" loading="lazy" onerror="this.remove()" />
+                </div>
+                <figcaption>Bem-casado<span class="produto__preco">R$ 6 un.</span></figcaption>
+              </figure>
+              <figure class="produto">
+                <div class="cake-photo cake-photo--sq">
+                  <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=700&q=80&auto=format&fit=crop" alt="Trio de trufas" loading="lazy" onerror="this.remove()" />
+                </div>
+                <figcaption>Trio de Trufas<span class="produto__preco">R$ 15</span></figcaption>
+              </figure>
+              <figure class="produto">
+                <div class="cake-photo cake-photo--sq">
+                  <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=700&q=80&auto=format&fit=crop" alt="Bandeja de docinhos" loading="lazy" onerror="this.remove()" />
+                </div>
+                <figcaption>Bandeja de Docinhos — 50 un.<span class="produto__preco">R$ 120</span></figcaption>
+              </figure>
+              <figure class="produto">
+                <div class="cake-photo cake-photo--sq">
+                  <img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=700&q=80&auto=format&fit=crop" alt="Cupcakes decorados" loading="lazy" onerror="this.remove()" />
+                </div>
+                <figcaption>Cupcakes Decorados — 12 un.<span class="produto__preco">R$ 96</span></figcaption>
+              </figure>
+            </div>
+
+            <div class="catalogo__grid catalogo__panel" data-panel="especiais">
+              <figure class="produto">
+                <div class="cake-photo cake-photo--sq">
+                  <span class="selo">Novidade</span>
+                  <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=700&q=80&auto=format&fit=crop" alt="Bolo no pote" loading="lazy" onerror="this.remove()" />
+                </div>
+                <figcaption>Bolo no Pote<span class="produto__preco">R$ 14 un.</span></figcaption>
+              </figure>
+              <figure class="produto">
+                <div class="cake-photo cake-photo--sq">
+                  <img src="https://images.unsplash.com/photo-1542826438-bd32f43d626f?w=700&q=80&auto=format&fit=crop" alt="Morango do amor" loading="lazy" onerror="this.remove()" />
+                </div>
+                <figcaption>Morango do Amor<span class="produto__preco">R$ 12 un.</span></figcaption>
+              </figure>
+              <figure class="produto">
+                <div class="cake-photo cake-photo--sq">
+                  <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=700&q=80&auto=format&fit=crop" alt="Copinho de mousse" loading="lazy" onerror="this.remove()" />
+                </div>
+                <figcaption>Copinho de Mousse<span class="produto__preco">R$ 9 un.</span></figcaption>
+              </figure>
+              <figure class="produto">
+                <div class="cake-photo cake-photo--sq">
+                  <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=700&q=80&auto=format&fit=crop" alt="Caixa surpresa" loading="lazy" onerror="this.remove()" />
+                </div>
+                <figcaption>Caixa Surpresa<span class="produto__preco">R$ 85</span></figcaption>
+              </figure>
+              <figure class="produto">
+                <div class="cake-photo cake-photo--sq">
+                  <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=700&q=80&auto=format&fit=crop" alt="Doces para festas" loading="lazy" onerror="this.remove()" />
+                </div>
+                <figcaption>Festa na Caixa<span class="produto__preco">sob consulta</span></figcaption>
+              </figure>
+              <figure class="produto">
+                <div class="cake-photo cake-photo--sq">
+                  <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=700&q=80&auto=format&fit=crop" alt="Cookies artesanais" loading="lazy" onerror="this.remove()" />
+                </div>
+                <figcaption>Cookies Artesanais<span class="produto__preco">R$ 8 un.</span></figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== COMO ENCOMENDAR ===== -->
+    <section class="passos section">
+      <div class="container">
+        <h2 class="section__title">Como encomendar</h2>
+        <p class="section__subtitle">Três passos para a sua festa ficar inesquecível</p>
+        <div class="passos__grid">
+          <div class="passo">
+            <span class="passo__num">1</span>
+            <h3>Escolha &amp; personalize</h3>
+            <p>Conte o tema, o tamanho e os sabores. Fazemos o projeto do bolo sob medida para a sua comemoração.</p>
+          </div>
+          <div class="passo">
+            <span class="passo__num">2</span>
+            <h3>Confirme a data</h3>
+            <p>Encomendas sob consulta: reservamos a sua data e cuidamos de cada detalhe com antecedência.</p>
+          </div>
+          <div class="passo">
+            <span class="passo__num">3</span>
+            <h3>Receba &amp; celebre</h3>
+            <p>Seu pedido chega impecável e fresquinho, com todo o padrão de qualidade do nosso castelo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SOBRE ===== -->
+    <section class="sobre section" id="sobre">
+      <div class="container container--narrow">
+        <h2 class="section__title">Sobre nós</h2>
+        <p class="sobre__text">
+          O Castelo dos Bolos nasceu para transformar comemorações em momentos
+          memoráveis. Somos uma confeitaria especializada em bolos personalizados,
+          com alto padrão de qualidade e segurança alimentar em tudo o que produzimos.
+          Do aniversário infantil à festa de 15 anos, do chá revelação ao casamento,
+          cada encomenda é tratada como única — porque a sua festa merece um bolo
+          feito com criatividade, capricho e tradição.
+        </p>
+        <p class="sobre__assinatura">Castelo dos Bolos</p>
+      </div>
+    </section>
+
+    <!-- ===== DESTAQUE FESTAS & EVENTOS ===== -->
+    <section class="oferta section">
+      <div class="container oferta__layout">
+        <div class="oferta__card">
+          <h2 class="oferta__title">Festas &amp; Eventos</h2>
+          <p class="oferta__text">
+            Aniversários, 15 anos, casamentos, chás revelação e eventos corporativos:
+            montamos um orçamento sob medida com bolo, docinhos e tudo o que a sua
+            celebração precisa. Consulte condições especiais para eventos.
+          </p>
+          <a href="#contato" class="btn btn--outline-light">Pedir orçamento</a>
+        </div>
+        <div class="oferta__img cake-photo">
+          <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=1000&q=80&auto=format&fit=crop" alt="Bolo de festa com velas" loading="lazy" onerror="this.remove()" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DEPOIMENTOS ===== -->
+    <section class="depoimentos section" id="depoimentos">
+      <div class="container container--narrow">
+        <h2 class="section__title">Feedback dos clientes</h2>
+        <div class="depoimentos__carousel">
+          <button class="depoimentos__arrow" id="depoPrev" aria-label="Depoimento anterior">←</button>
+          <div class="depoimentos__viewport">
+            <blockquote class="depoimento depoimento--active">
+              <span class="depoimento__aspas">“</span>
+              <span class="depoimento__estrelas" aria-hidden="true">★★★★★</span>
+              <p>O bolo do aniversário do meu filho ficou idêntico ao tema que pedi.
+              Todo mundo elogiou — além de lindo, estava delicioso. Atendimento
+              nota dez do começo ao fim.</p>
+              <cite>Mariana S.</cite>
+            </blockquote>
+            <blockquote class="depoimento">
+              <span class="depoimento__aspas">“</span>
+              <span class="depoimento__estrelas" aria-hidden="true">★★★★★</span>
+              <p>O morango do amor é simplesmente viciante! Peço toda semana e o
+              bolo no pote virou o lanche oficial aqui de casa. Qualidade sempre
+              impecável.</p>
+              <cite>Cláudia M.</cite>
+            </blockquote>
+            <blockquote class="depoimento">
+              <span class="depoimento__aspas">“</span>
+              <span class="depoimento__estrelas" aria-hidden="true">★★★★★</span>
+              <p>Encomendei o kit festa completo para os 15 anos da minha filha.
+              Chegou tudo pontualmente, os docinhos impecáveis e o bolo de dois
+              andares foi o destaque da noite.</p>
+              <cite>Fernanda L.</cite>
+            </blockquote>
+          </div>
+          <button class="depoimentos__arrow" id="depoNext" aria-label="Próximo depoimento">→</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTATO ===== -->
+    <section class="contato section" id="contato">
+      <div class="container contato__layout">
+        <div class="contato__img cake-photo">
+          <img src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=1000&q=80&auto=format&fit=crop" alt="Produção artesanal do Castelo dos Bolos" loading="lazy" onerror="this.remove()" />
+        </div>
+        <div class="contato__card">
+          <h2 class="contato__title">Fale com a gente</h2>
+          <ul class="contato__list">
+            <li>
+              <span class="contato__label">WhatsApp</span>
+              <a href="https://wa.me/5511999999999" target="_blank" rel="noopener">(11) 99999-9999</a>
+            </li>
+            <li>
+              <span class="contato__label">Instagram</span>
+              <a href="https://instagram.com/castelos_dos_bolos" target="_blank" rel="noopener">@castelos_dos_bolos</a>
+            </li>
+            <li>
+              <span class="contato__label">E-mail</span>
+              <a href="mailto:contato@castelodosbolos.com.br">contato@castelodosbolos.com.br</a>
+            </li>
+            <li>
+              <span class="contato__label">Encomendas</span>
+              <span>Sob consulta, com antecedência<br/>Alto padrão de qualidade e segurança alimentar</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FORMULÁRIO ===== -->
+    <section class="pedido section" id="pedido">
+      <div class="container container--narrow">
+        <h2 class="section__title">Faça sua encomenda</h2>
+        <p class="section__subtitle">Preencha os dados e continue a conversa direto no nosso WhatsApp</p>
+
+        <form class="pedido__form" id="pedidoForm">
+          <div class="pedido__row">
+            <label class="pedido__field">
+              <span>Seu nome</span>
+              <input type="text" name="nome" required autocomplete="name" />
+            </label>
+            <label class="pedido__field">
+              <span>Telefone</span>
+              <input type="tel" name="telefone" autocomplete="tel" />
+            </label>
+          </div>
+          <div class="pedido__row">
+            <label class="pedido__field">
+              <span>Data da festa</span>
+              <input type="date" name="data" />
+            </label>
+            <label class="pedido__field">
+              <span>O que você deseja?</span>
+              <select name="tipo">
+                <option>Bolo personalizado</option>
+                <option>Docinhos</option>
+                <option>Bolo no pote</option>
+                <option>Morango do amor</option>
+                <option>Kit festa</option>
+                <option>Outro</option>
+              </select>
+            </label>
+          </div>
+          <label class="pedido__field">
+            <span>Conte um pouco sobre a sua festa</span>
+            <textarea name="mensagem" rows="3" placeholder="Tema, número de convidados, sabores preferidos..."></textarea>
+          </label>
+          <button type="submit" class="btn btn--principal">Enviar pelo WhatsApp</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__layout">
+      <p class="footer__logo">Castelo dos Bolos</p>
+      <nav class="footer__nav" aria-label="Rodapé">
+        <a href="#inicio">Início</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="footer__social">
+        <a href="https://instagram.com/castelos_dos_bolos" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+        <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3z"/>
+            <path d="M8.8 8.6c.4-.9 1-.8 1.3-.1l.6 1.3c.2.4-.1.8-.5 1.1.4 1 1.4 2 2.4 2.4.3-.4.7-.7 1.1-.5l1.3.6c.7.3.8.9-.1 1.3-2.7 1.3-7.4-3.4-6.1-6.1z" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <p class="footer__copy">Feito com <span aria-hidden="true">♥</span> pelo Castelo dos Bolos — bolos personalizados para momentos inesquecíveis</p>
+  </footer>
+
+  <!-- WhatsApp flutuante -->
+  <a class="zap-flutuante" href="https://wa.me/5511999999999" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+      <path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3z"/>
+      <path d="M8.8 8.6c.4-.9 1-.8 1.3-.1l.6 1.3c.2.4-.1.8-.5 1.1.4 1 1.4 2 2.4 2.4.3-.4.7-.7 1.1-.5l1.3.6c.7.3.8.9-.1 1.3-2.7 1.3-7.4-3.4-6.1-6.1z" fill="currentColor" stroke="none"/>
+    </svg>
+  </a>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
