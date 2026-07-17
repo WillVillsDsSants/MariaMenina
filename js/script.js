@@ -19,7 +19,7 @@ navMenu.addEventListener('click', (e) => {
 });
 
 // ----- Link ativo no menu + nav flutuante conforme rolagem -----
-const secoes = ['inicio', 'catalogo', 'sobre', 'contato'];
+const secoes = ['inicio', 'catalogo', 'galeria', 'sobre', 'contato'];
 const links = document.querySelectorAll('.nav__link');
 const nav = document.querySelector('.nav');
 
@@ -84,8 +84,8 @@ reiniciarDepoAutoplay();
 
 // ----- Revelação dos elementos ao rolar a página -----
 const alvosReveal = document.querySelectorAll(
-  '.destaque, .card, .produto, .numero, .passo, .recheios, .sobre__text, .sobre__assinatura, ' +
-  '.oferta__card, .oferta__img, .contato__img, .contato__card, .pedido__form'
+  '.destaque, .esp, .produto, .numero, .passo, .recheios, .sobre__text, .sobre__assinatura, ' +
+  '.oferta__card, .oferta__img, .galeria__item, .cta__inner, .contato__img, .contato__card, .pedido__form'
 );
 
 alvosReveal.forEach((el) => el.classList.add('reveal'));
@@ -112,8 +112,7 @@ const observador = new IntersectionObserver((entradas) => {
 alvosReveal.forEach((el) => observador.observe(el));
 
 // ----- Formulário → WhatsApp -----
-// Troque pelo número real da D'Naty Confeitaria (DDI + DDD + número, só dígitos)
-const WHATSAPP_NUMERO = '5514999999999';
+const WHATSAPP_NUMERO = '5514997154069';
 
 document.getElementById('pedidoForm').addEventListener('submit', (e) => {
   e.preventDefault();
