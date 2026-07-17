@@ -1,26 +1,26 @@
 /* ============================================================
-   Castelo dos Bolos — identidade visual
-   Vermelho #A11F22 | Dourado #C89A2B | Creme #F7F0E2
-   Chocolate #5B3824 | Branco #FFFFFF
-   Fontes: Cinzel (títulos) + Cormorant Garamond (detalhes) + Poppins (textos)
+   D'Naty Confeitaria — identidade visual
+   Rosa claro #F8D9E3 | Rosa médio #D8849D | Bordô #7A3048
+   Dourado #D4AF37 | Branco #FFFFFF
+   Fontes: Great Vibes (script) + Montserrat (textos e títulos)
    ============================================================ */
 
 :root {
-  --vermelho: #A11F22;
-  --vermelho-vivo: #B32427;
-  --vermelho-escuro: #7E1719;
-  --dourado: #C89A2B;
-  --dourado-claro: #E3C878;
-  --dourado-escuro: #A67D1E;
-  --creme: #F7F0E2;
-  --creme-claro: #FBF6EC;
+  --rosa-claro: #F8D9E3;
+  --rosa-suave: #FBEDF2;
+  --rosa-medio: #D8849D;
+  --rosa-vivo: #C96F8B;
+  --bordo: #7A3048;
+  --bordo-escuro: #5E2437;
+  --dourado: #D4AF37;
+  --dourado-claro: #E8CF7F;
+  --dourado-escuro: #B3922B;
   --branco: #FFFFFF;
-  --chocolate: #5B3824;
-  --chocolate-suave: #7d5940;
-  --font-titulo: 'Cinzel', serif;
-  --font-detalhe: 'Cormorant Garamond', serif;
-  --font-sans: 'Poppins', sans-serif;
-  --sombra: 0 12px 30px rgba(91, 56, 36, 0.12);
+  --texto: #5E4450;
+  --texto-suave: #8A6E7A;
+  --font-script: 'Great Vibes', cursive;
+  --font-sans: 'Montserrat', sans-serif;
+  --sombra: 0 12px 30px rgba(122, 48, 72, 0.14);
   --raio: 20px;
 }
 
@@ -31,8 +31,8 @@ html { scroll-behavior: smooth; }
 body {
   font-family: var(--font-sans);
   font-weight: 300;
-  color: var(--chocolate);
-  background: var(--creme);
+  color: var(--texto);
+  background: var(--rosa-suave);
   line-height: 1.7;
 }
 
@@ -46,21 +46,33 @@ img, svg { max-width: 100%; display: block; }
 .container--narrow { width: min(760px, 92%); }
 
 .section { padding: 84px 0; }
+.section--compacta { padding: 44px 0 36px; }
+
+/* Palavra em script acima dos títulos de seção */
+.section__script {
+  display: block;
+  font-family: var(--font-script);
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  color: var(--rosa-medio);
+  text-align: center;
+  line-height: 1;
+  margin-bottom: 2px;
+}
 
 .section__title {
-  font-family: var(--font-titulo);
+  font-family: var(--font-sans);
   font-weight: 600;
-  font-size: clamp(1.5rem, 3.2vw, 2.2rem);
-  letter-spacing: 0.06em;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   text-align: center;
-  color: var(--vermelho);
+  color: var(--bordo);
   margin-bottom: 16px;
 }
 
 .section__subtitle {
   text-align: center;
-  color: var(--chocolate-suave);
+  color: var(--texto-suave);
   font-size: 0.98rem;
   margin-bottom: 48px;
 }
@@ -82,35 +94,35 @@ img, svg { max-width: 100%; display: block; }
 .btn:hover { transform: translateY(-2px); box-shadow: var(--sombra); }
 
 .btn--principal {
-  background: linear-gradient(180deg, var(--vermelho-vivo), var(--vermelho-escuro));
+  background: linear-gradient(180deg, var(--rosa-medio), var(--bordo));
   color: var(--branco);
-  border: 1px solid rgba(227, 200, 120, 0.55);
+  border: 1px solid rgba(232, 207, 127, 0.55);
 }
-.btn--principal:hover { background: linear-gradient(180deg, var(--vermelho), var(--vermelho-escuro)); }
+.btn--principal:hover { background: linear-gradient(180deg, var(--rosa-vivo), var(--bordo-escuro)); }
 
 .btn--outline-light {
   background: transparent;
   color: var(--branco);
-  border: 1.5px solid rgba(227, 200, 120, 0.85);
+  border: 1.5px solid rgba(232, 207, 127, 0.85);
 }
-.btn--outline-light:hover { background: rgba(255, 255, 255, 0.12); }
+.btn--outline-light:hover { background: rgba(255, 255, 255, 0.14); }
 
 .btn--ghost {
-  background: rgba(255, 255, 255, 0.6);
-  color: var(--vermelho);
-  border: 1.5px solid var(--vermelho);
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--bordo);
+  border: 1.5px solid var(--rosa-medio);
 }
 .btn--ghost:hover { background: var(--branco); }
 
 /* ============================================================
-   HEADER + NAV — foto grande de bolo com véu creme
+   HEADER + NAV — foto de bolo com véu rosa
    ============================================================ */
 .header {
   position: relative;
-  background-color: var(--creme);
+  background-color: var(--rosa-claro);
   background-image:
-    linear-gradient(180deg, rgba(247, 240, 226, 0.92) 0%, rgba(247, 240, 226, 0) 26%),
-    linear-gradient(90deg, rgba(247, 240, 226, 0.97) 0%, rgba(247, 240, 226, 0.9) 34%, rgba(247, 240, 226, 0.4) 62%, rgba(247, 240, 226, 0.06) 100%),
+    linear-gradient(180deg, rgba(248, 217, 227, 0.94) 0%, rgba(248, 217, 227, 0) 26%),
+    linear-gradient(90deg, rgba(251, 237, 242, 0.98) 0%, rgba(248, 217, 227, 0.92) 34%, rgba(248, 217, 227, 0.45) 62%, rgba(248, 217, 227, 0.08) 100%),
     url("https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=1600&q=80&auto=format&fit=crop");
   background-size: auto, auto, cover;
   background-position: center, center, center right;
@@ -118,7 +130,7 @@ img, svg { max-width: 100%; display: block; }
   overflow: hidden;
 }
 
-/* Borda rendada (scallop) desaguando no letreiro vermelho */
+/* Borda rendada (scallop) desaguando na faixa rosa */
 .header::after {
   content: "";
   position: absolute;
@@ -126,7 +138,7 @@ img, svg { max-width: 100%; display: block; }
   right: 0;
   bottom: -1px;
   height: 18px;
-  background-image: radial-gradient(circle at 12px -8px, transparent 12px, var(--vermelho) 12.5px);
+  background-image: radial-gradient(circle at 12px -8px, transparent 12px, var(--rosa-medio) 12.5px);
   background-size: 24px 18px;
   background-repeat: repeat-x;
   z-index: 2;
@@ -144,7 +156,7 @@ img, svg { max-width: 100%; display: block; }
   align-items: center;
   gap: 12px;
   text-decoration: none;
-  color: var(--vermelho);
+  color: var(--bordo);
 }
 
 .nav__logo-circle {
@@ -154,17 +166,30 @@ img, svg { max-width: 100%; display: block; }
   border-radius: 50%;
   display: grid;
   place-items: center;
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.65);
+  color: var(--dourado-escuro);
+  box-shadow: 0 0 0 4px rgba(216, 132, 157, 0.18);
 }
 
 .nav__logo-text {
-  font-family: var(--font-titulo);
-  font-weight: 700;
-  font-size: 0.98rem;
-  letter-spacing: 0.06em;
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.nav__logo-script {
+  font-family: var(--font-script);
+  font-size: 1.7rem;
+  color: var(--bordo);
+}
+
+.nav__logo-sub {
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.34em;
   text-transform: uppercase;
-  line-height: 1.2;
-  max-width: 150px;
+  color: var(--rosa-medio);
+  margin-top: 3px;
 }
 
 .nav__menu {
@@ -175,7 +200,7 @@ img, svg { max-width: 100%; display: block; }
 
 .nav__link {
   text-decoration: none;
-  color: var(--chocolate);
+  color: var(--texto);
   font-size: 0.95rem;
   font-weight: 400;
   padding-bottom: 5px;
@@ -183,7 +208,7 @@ img, svg { max-width: 100%; display: block; }
   transition: border-color 0.25s ease, color 0.25s ease;
 }
 
-.nav__link:hover, .nav__link--active { border-color: var(--vermelho); color: var(--vermelho); }
+.nav__link:hover, .nav__link--active { border-color: var(--rosa-medio); color: var(--bordo); }
 
 .nav__toggle {
   display: none;
@@ -198,7 +223,7 @@ img, svg { max-width: 100%; display: block; }
 .nav__toggle span {
   width: 24px;
   height: 2px;
-  background: var(--vermelho);
+  background: var(--bordo);
   border-radius: 2px;
 }
 
@@ -218,40 +243,46 @@ img, svg { max-width: 100%; display: block; }
 
 .hero__chip {
   display: inline-block;
-  background: rgba(255, 255, 255, 0.82);
-  color: var(--chocolate);
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--bordo);
   font-size: 0.8rem;
   font-weight: 500;
   padding: 8px 20px;
   border-radius: 999px;
-  border: 1px solid rgba(200, 154, 43, 0.45);
-  box-shadow: 0 4px 14px rgba(91, 56, 36, 0.1);
-  margin-bottom: 22px;
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  box-shadow: 0 4px 14px rgba(122, 48, 72, 0.1);
+  margin-bottom: 18px;
 }
 
 .hero__title {
-  font-family: var(--font-titulo);
-  font-weight: 700;
-  font-size: clamp(2.2rem, 5.6vw, 3.8rem);
-  letter-spacing: 0.04em;
+  font-family: var(--font-script);
+  font-weight: 400;
+  font-size: clamp(4rem, 9.5vw, 6.4rem);
+  line-height: 1;
+  color: var(--bordo);
+}
+
+.hero__title-sub {
+  font-size: clamp(0.9rem, 2vw, 1.15rem);
+  font-weight: 500;
+  letter-spacing: 0.5em;
   text-transform: uppercase;
-  line-height: 1.12;
-  color: var(--vermelho);
+  color: var(--rosa-medio);
+  margin: 4px 0 0 8px;
 }
 
 .hero__subtitle {
-  font-family: var(--font-detalhe);
-  font-style: italic;
-  font-weight: 600;
-  font-size: 1.5rem;
-  color: var(--dourado-escuro);
-  margin: 12px 0 20px;
+  font-family: var(--font-script);
+  font-size: clamp(1.5rem, 3vw, 1.9rem);
+  color: var(--rosa-vivo);
+  line-height: 1.25;
+  margin: 18px 0 14px;
 }
 
 .hero__text {
   max-width: 46ch;
   margin-bottom: 34px;
-  color: var(--chocolate-suave);
+  color: var(--texto-suave);
 }
 
 .hero__acoes {
@@ -267,7 +298,7 @@ img, svg { max-width: 100%; display: block; }
 .cake-photo {
   border-radius: var(--raio);
   overflow: hidden;
-  background: linear-gradient(145deg, #f9f1e2, #f1e3c9);
+  background: linear-gradient(145deg, #fdeef4, #f6d3df);
 }
 
 .cake-photo img {
@@ -278,6 +309,57 @@ img, svg { max-width: 100%; display: block; }
 }
 
 .cake-photo--sq { aspect-ratio: 1 / 1; }
+
+/* ============================================================
+   DESTAQUES — círculos no estilo dos destaques do Instagram
+   ============================================================ */
+.destaques { background: var(--branco); }
+
+.destaques__row {
+  display: flex;
+  justify-content: center;
+  gap: clamp(20px, 4vw, 48px);
+  flex-wrap: wrap;
+}
+
+.destaque {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  transition: transform 0.25s ease;
+}
+
+.destaque:hover { transform: translateY(-4px); }
+
+.destaque__circle {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  background: var(--rosa-claro);
+  color: var(--bordo);
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--branco);
+  box-shadow: 0 0 0 2px var(--rosa-medio), 0 8px 18px rgba(122, 48, 72, 0.12);
+  transition: box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.destaque__circle svg { width: 34px; height: 34px; }
+
+.destaque:hover .destaque__circle {
+  background: var(--rosa-medio);
+  color: var(--branco);
+  box-shadow: 0 0 0 2px var(--bordo), 0 10px 22px rgba(122, 48, 72, 0.2);
+}
+
+.destaque__label {
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--texto);
+}
 
 /* ============================================================
    VITRINE DE CARDS
@@ -294,8 +376,8 @@ img, svg { max-width: 100%; display: block; }
   background: var(--branco);
   border-radius: var(--raio);
   overflow: hidden;
-  border: 1px solid rgba(200, 154, 43, 0.18);
-  box-shadow: 0 6px 18px rgba(91, 56, 36, 0.06);
+  border: 1px solid rgba(216, 132, 157, 0.28);
+  box-shadow: 0 6px 18px rgba(122, 48, 72, 0.06);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -304,7 +386,7 @@ img, svg { max-width: 100%; display: block; }
 .card:hover {
   transform: translateY(-6px);
   box-shadow: var(--sombra);
-  border-color: rgba(200, 154, 43, 0.55);
+  border-color: rgba(216, 132, 157, 0.65);
 }
 
 .card__img {
@@ -319,17 +401,18 @@ img, svg { max-width: 100%; display: block; }
 }
 
 .card__title {
-  font-family: var(--font-titulo);
+  font-family: var(--font-sans);
   font-weight: 600;
-  font-size: 0.98rem;
-  letter-spacing: 0.03em;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   margin-bottom: 6px;
-  color: var(--vermelho);
+  color: var(--bordo);
 }
 
 .card__text {
   font-size: 0.86rem;
-  color: var(--chocolate-suave);
+  color: var(--texto-suave);
   padding-right: 40px;
 }
 
@@ -342,22 +425,22 @@ img, svg { max-width: 100%; display: block; }
   border-radius: 50%;
   display: grid;
   place-items: center;
-  background: var(--creme);
-  color: var(--vermelho);
+  background: var(--rosa-claro);
+  color: var(--bordo);
   text-decoration: none;
   font-size: 1rem;
   transition: background 0.25s ease, color 0.25s ease;
 }
 
-.card__link:hover { background: var(--vermelho); color: var(--branco); }
+.card__link:hover { background: var(--bordo); color: var(--branco); }
 
-.card--destaque { background: linear-gradient(160deg, #fdf8ec, #f6ebd2); }
+.card--destaque { background: linear-gradient(160deg, #fdf1f5, #f8dbe5); }
 .card--destaque .card__link { background: var(--branco); }
 
 /* ============================================================
    CATÁLOGO
    ============================================================ */
-.catalogo { background: var(--creme); }
+.catalogo { background: var(--rosa-claro); }
 
 .catalogo__tabs {
   display: flex;
@@ -372,7 +455,7 @@ img, svg { max-width: 100%; display: block; }
   font-family: var(--font-sans);
   font-size: 0.95rem;
   font-weight: 400;
-  color: var(--chocolate-suave);
+  color: var(--texto-suave);
   cursor: pointer;
   padding-bottom: 6px;
   border-bottom: 2px solid transparent;
@@ -380,7 +463,7 @@ img, svg { max-width: 100%; display: block; }
 }
 
 .catalogo__tab--active {
-  color: var(--vermelho);
+  color: var(--bordo);
   font-weight: 500;
   border-color: var(--dourado);
 }
@@ -393,7 +476,7 @@ img, svg { max-width: 100%; display: block; }
 }
 
 .recheios {
-  background: var(--vermelho);
+  background: linear-gradient(170deg, var(--bordo), var(--bordo-escuro));
   color: var(--branco);
   border-radius: var(--raio);
   padding: 38px 32px;
@@ -401,10 +484,9 @@ img, svg { max-width: 100%; display: block; }
 }
 
 .recheios__title {
-  font-family: var(--font-detalhe);
-  font-style: italic;
-  font-weight: 600;
-  font-size: 2.2rem;
+  font-family: var(--font-script);
+  font-weight: 400;
+  font-size: 2.6rem;
   color: var(--dourado-claro);
   margin-bottom: 10px;
 }
@@ -423,15 +505,14 @@ img, svg { max-width: 100%; display: block; }
 .recheios__list li {
   padding: 9px 0;
   font-size: 0.9rem;
-  border-bottom: 1px solid rgba(227, 200, 120, 0.3);
+  border-bottom: 1px solid rgba(232, 207, 127, 0.3);
 }
 
 .recheios__list li:last-child { border-bottom: none; }
 
 .recheios__obs {
-  font-family: var(--font-detalhe);
-  font-style: italic;
-  font-size: 1.05rem;
+  font-family: var(--font-script);
+  font-size: 1.3rem;
   color: var(--dourado-claro);
   margin-bottom: 24px;
 }
@@ -454,16 +535,16 @@ img, svg { max-width: 100%; display: block; }
   background: var(--branco);
   padding: 12px 12px 18px;
   border-radius: 14px;
-  border: 1px solid rgba(200, 154, 43, 0.22);
-  box-shadow: 0 8px 20px rgba(91, 56, 36, 0.09);
+  border: 1px solid rgba(216, 132, 157, 0.3);
+  box-shadow: 0 8px 20px rgba(122, 48, 72, 0.09);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .produto:hover {
   transform: translateY(-6px) rotate(0deg);
-  box-shadow: 0 14px 30px rgba(91, 56, 36, 0.15);
-  border-color: rgba(200, 154, 43, 0.55);
+  box-shadow: 0 14px 30px rgba(122, 48, 72, 0.16);
+  border-color: rgba(216, 132, 157, 0.7);
 }
 
 .produto .cake-photo { border-radius: 9px; }
@@ -472,17 +553,15 @@ img, svg { max-width: 100%; display: block; }
   margin-top: 12px;
   font-size: 0.88rem;
   font-weight: 500;
-  color: var(--chocolate);
+  color: var(--texto);
   line-height: 1.4;
 }
 
 .produto__preco {
   display: block;
-  font-family: var(--font-detalhe);
-  font-style: italic;
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--vermelho);
+  font-family: var(--font-script);
+  font-size: 1.25rem;
+  color: var(--rosa-vivo);
   margin-top: 3px;
 }
 
@@ -506,39 +585,37 @@ img, svg { max-width: 100%; display: block; }
   margin: 0 auto 18px;
   display: grid;
   place-items: center;
-  background: linear-gradient(160deg, #fdf8ec, #f6ebd2);
+  background: linear-gradient(160deg, #fdf1f5, #f8dbe5);
   border: 1.6px dashed var(--dourado);
   border-radius: 50%;
-  font-family: var(--font-titulo);
-  font-weight: 600;
-  font-size: 1.5rem;
-  color: var(--vermelho);
+  font-family: var(--font-script);
+  font-size: 1.9rem;
+  color: var(--bordo);
 }
 
 .passo h3 {
-  font-family: var(--font-titulo);
-  font-size: 0.95rem;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
   font-weight: 600;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   margin-bottom: 8px;
-  color: var(--chocolate);
+  color: var(--bordo);
 }
 
-.passo p { font-size: 0.88rem; color: var(--chocolate-suave); }
+.passo p { font-size: 0.88rem; color: var(--texto-suave); }
 
 /* ============================================================
    SOBRE
    ============================================================ */
-.sobre { background: var(--creme); text-align: center; }
+.sobre { background: var(--rosa-suave); text-align: center; }
 
-.sobre__text { color: var(--chocolate-suave); }
+.sobre__text { color: var(--texto-suave); }
 
 .sobre__assinatura {
-  font-family: var(--font-detalhe);
-  font-style: italic;
-  font-weight: 600;
-  font-size: 2rem;
-  color: var(--vermelho);
+  font-family: var(--font-script);
+  font-size: 2.6rem;
+  color: var(--bordo);
   margin-top: 30px;
 }
 
@@ -555,7 +632,7 @@ img, svg { max-width: 100%; display: block; }
 }
 
 .oferta__card {
-  background: var(--vermelho);
+  background: linear-gradient(170deg, var(--bordo), var(--bordo-escuro));
   color: var(--branco);
   border-radius: var(--raio);
   padding: 48px 42px;
@@ -567,11 +644,10 @@ img, svg { max-width: 100%; display: block; }
 }
 
 .oferta__title {
-  font-family: var(--font-titulo);
-  font-weight: 600;
-  font-size: 1.7rem;
-  letter-spacing: 0.04em;
-  line-height: 1.2;
+  font-family: var(--font-script);
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 1.1;
   color: var(--dourado-claro);
 }
 
@@ -582,7 +658,7 @@ img, svg { max-width: 100%; display: block; }
 /* ============================================================
    DEPOIMENTOS
    ============================================================ */
-.depoimentos { background: var(--creme); }
+.depoimentos { background: var(--rosa-claro); }
 
 .depoimentos__carousel {
   display: flex;
@@ -602,7 +678,7 @@ img, svg { max-width: 100%; display: block; }
 .depoimento--active { display: block; }
 
 .depoimento__aspas {
-  font-family: var(--font-detalhe);
+  font-family: var(--font-script);
   font-size: 3.4rem;
   color: var(--dourado);
   line-height: 0.5;
@@ -618,22 +694,21 @@ img, svg { max-width: 100%; display: block; }
   margin-bottom: 14px;
 }
 
-.depoimento p { color: var(--chocolate-suave); max-width: 56ch; margin-inline: auto; }
+.depoimento p { color: var(--texto); max-width: 56ch; margin-inline: auto; }
 
 .depoimento cite {
   display: block;
-  font-family: var(--font-detalhe);
-  font-style: italic;
-  font-weight: 600;
-  font-size: 1.4rem;
-  color: var(--vermelho);
+  font-family: var(--font-script);
+  font-style: normal;
+  font-size: 1.7rem;
+  color: var(--bordo);
   margin-top: 20px;
 }
 
 .depoimentos__arrow {
   background: none;
   border: 1.4px solid var(--dourado);
-  color: var(--vermelho);
+  color: var(--bordo);
   width: 42px;
   height: 42px;
   border-radius: 50%;
@@ -643,7 +718,7 @@ img, svg { max-width: 100%; display: block; }
   transition: background 0.25s ease, color 0.25s ease;
 }
 
-.depoimentos__arrow:hover { background: var(--vermelho); color: var(--branco); border-color: var(--vermelho); }
+.depoimentos__arrow:hover { background: var(--bordo); color: var(--branco); border-color: var(--bordo); }
 
 /* ============================================================
    CONTATO
@@ -662,7 +737,7 @@ img, svg { max-width: 100%; display: block; }
 }
 
 .contato__card {
-  background: var(--vermelho);
+  background: linear-gradient(170deg, var(--bordo), var(--bordo-escuro));
   color: var(--branco);
   border-radius: var(--raio);
   padding: 44px 40px;
@@ -672,10 +747,9 @@ img, svg { max-width: 100%; display: block; }
 }
 
 .contato__title {
-  font-family: var(--font-titulo);
-  font-weight: 600;
-  font-size: 1.5rem;
-  letter-spacing: 0.04em;
+  font-family: var(--font-script);
+  font-weight: 400;
+  font-size: 2.1rem;
   color: var(--dourado-claro);
   margin-bottom: 24px;
 }
@@ -704,7 +778,7 @@ img, svg { max-width: 100%; display: block; }
 /* ============================================================
    FORMULÁRIO DE ENCOMENDA
    ============================================================ */
-.pedido { background: var(--creme); }
+.pedido { background: var(--rosa-suave); }
 
 .pedido__form { display: grid; gap: 26px; }
 
@@ -719,7 +793,7 @@ img, svg { max-width: 100%; display: block; }
 .pedido__field span {
   font-size: 0.82rem;
   font-weight: 500;
-  color: var(--chocolate);
+  color: var(--bordo);
 }
 
 .pedido__field input,
@@ -728,10 +802,10 @@ img, svg { max-width: 100%; display: block; }
   font-family: var(--font-sans);
   font-size: 0.95rem;
   font-weight: 300;
-  color: var(--chocolate);
+  color: var(--texto);
   background: transparent;
   border: none;
-  border-bottom: 1.5px solid var(--dourado);
+  border-bottom: 1.5px solid var(--rosa-medio);
   padding: 9px 2px;
   outline: none;
   transition: border-color 0.25s ease;
@@ -742,7 +816,7 @@ img, svg { max-width: 100%; display: block; }
 
 .pedido__field input:focus,
 .pedido__field select:focus,
-.pedido__field textarea:focus { border-bottom-color: var(--vermelho); }
+.pedido__field textarea:focus { border-bottom-color: var(--bordo); }
 
 .pedido__form .btn { justify-self: center; margin-top: 10px; }
 
@@ -750,7 +824,7 @@ img, svg { max-width: 100%; display: block; }
    FOOTER
    ============================================================ */
 .footer {
-  background: var(--vermelho);
+  background: linear-gradient(180deg, var(--bordo), var(--bordo-escuro));
   color: var(--branco);
   padding: 44px 0 24px;
 }
@@ -764,13 +838,24 @@ img, svg { max-width: 100%; display: block; }
 }
 
 .footer__logo {
-  font-family: var(--font-titulo);
-  font-weight: 700;
-  font-size: 1.15rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.footer__logo-script {
+  font-family: var(--font-script);
+  font-size: 2rem;
   color: var(--dourado-claro);
-  line-height: 1.2;
+}
+
+.footer__logo-sub {
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--rosa-claro);
+  margin-top: 4px;
 }
 
 .footer__nav { display: flex; gap: 26px; }
@@ -790,7 +875,7 @@ img, svg { max-width: 100%; display: block; }
   color: var(--branco);
   width: 40px;
   height: 40px;
-  border: 1.3px solid rgba(227, 200, 120, 0.6);
+  border: 1.3px solid rgba(232, 207, 127, 0.6);
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -810,31 +895,31 @@ img, svg { max-width: 100%; display: block; }
    DETALHES DECORATIVOS
    ============================================================ */
 
-/* Ornamento dourado sob todos os títulos de seção */
+/* Ornamento dourado com coração sob os títulos de seção */
 .section__title::after {
   content: "";
   display: block;
   width: 120px;
   height: 12px;
   margin: 12px auto 0;
-  background: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20120%2012'%3E%3Cpath%20d='M4%206h40M76%206h40'%20stroke='%23C89A2B'%20stroke-width='1.4'%20stroke-linecap='round'/%3E%3Cpath%20d='M60%201.5%20l4.5%204.5%20-4.5%204.5%20-4.5%20-4.5%20z'%20fill='%23C89A2B'/%3E%3Ccircle%20cx='50'%20cy='6'%20r='1.6'%20fill='%23E3C878'/%3E%3Ccircle%20cx='70'%20cy='6'%20r='1.6'%20fill='%23E3C878'/%3E%3C/svg%3E") center / contain no-repeat;
+  background: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20120%2012'%3E%3Cpath%20d='M4%206h40M76%206h40'%20stroke='%23D4AF37'%20stroke-width='1.4'%20stroke-linecap='round'/%3E%3Cpath%20d='M60%2010.5%20C56%207%2053.5%204.8%2053.5%202.9%20a2.6%202.6%200%200%201%205.2%200%20a2.6%202.6%200%200%201%205.2%200%20c0%201.9%20-2.5%204.1%20-6.5%207.6%20z'%20fill='%23D8849D'/%3E%3Ccircle%20cx='48'%20cy='6'%20r='1.6'%20fill='%23E8CF7F'/%3E%3Ccircle%20cx='72'%20cy='6'%20r='1.6'%20fill='%23E8CF7F'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 
-/* Textura pontilhada suave nas seções creme */
+/* Textura pontilhada suave nas seções rosa */
 .catalogo,
 .depoimentos,
 .pedido {
-  background-image: radial-gradient(rgba(200, 154, 43, 0.15) 1.4px, transparent 1.5px);
+  background-image: radial-gradient(rgba(216, 132, 157, 0.22) 1.4px, transparent 1.5px);
   background-size: 26px 26px;
 }
 
-/* Cards vermelhos: borda pontilhada dourada + textura de confeitos */
+/* Cards bordô: borda pontilhada dourada + textura de confeitos */
 .recheios,
 .oferta__card,
 .contato__card {
   position: relative;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1.6px, transparent 1.7px);
-  background-size: 22px 22px;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1.6px, transparent 1.7px), linear-gradient(170deg, var(--bordo), var(--bordo-escuro));
+  background-size: 22px 22px, cover;
 }
 
 .recheios::before,
@@ -843,20 +928,20 @@ img, svg { max-width: 100%; display: block; }
   content: "";
   position: absolute;
   inset: 10px;
-  border: 1.5px dashed rgba(227, 200, 120, 0.55);
+  border: 1.5px dashed rgba(232, 207, 127, 0.55);
   border-radius: 12px;
   pointer-events: none;
 }
 
-/* Arabescos dourados decorativos */
+/* Arabescos florais decorativos */
 .vitrine .container,
 .catalogo .container { position: relative; }
 
 .floral {
   position: absolute;
   width: 110px;
-  color: var(--dourado);
-  opacity: 0.5;
+  color: var(--rosa-medio);
+  opacity: 0.45;
   pointer-events: none;
 }
 
@@ -887,7 +972,7 @@ img, svg { max-width: 100%; display: block; }
   top: 12px;
   left: 12px;
   z-index: 2;
-  background: linear-gradient(180deg, #d9ac3b, #b98a1f);
+  background: linear-gradient(180deg, var(--dourado), var(--dourado-escuro));
   color: #4a2e17;
   font-size: 0.66rem;
   font-weight: 600;
@@ -898,10 +983,10 @@ img, svg { max-width: 100%; display: block; }
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Coroazinhas na lista de recheios */
+/* Florzinhas na lista de recheios */
 .recheios__list li::before {
-  content: "♛";
-  color: rgba(227, 200, 120, 0.8);
+  content: "✿";
+  color: rgba(232, 207, 127, 0.85);
   font-size: 0.72em;
   margin-right: 8px;
 }
@@ -916,7 +1001,7 @@ img, svg { max-width: 100%; display: block; }
   left: 0;
   right: 0;
   height: 16px;
-  background-image: radial-gradient(circle at 12px 18px, var(--vermelho) 12px, transparent 12.5px);
+  background-image: radial-gradient(circle at 12px 18px, var(--bordo) 12px, transparent 12.5px);
   background-size: 24px 16px;
   background-repeat: repeat-x;
 }
@@ -926,16 +1011,16 @@ img, svg { max-width: 100%; display: block; }
    ============================================================ */
 
 /* Seleção de texto e barra de rolagem personalizadas */
-::selection { background: var(--vermelho); color: var(--branco); }
+::selection { background: var(--rosa-medio); color: var(--branco); }
 
 ::-webkit-scrollbar { width: 12px; }
-::-webkit-scrollbar-track { background: var(--creme); }
+::-webkit-scrollbar-track { background: var(--rosa-suave); }
 ::-webkit-scrollbar-thumb {
-  background: var(--vermelho);
+  background: var(--rosa-medio);
   border-radius: 8px;
-  border: 3px solid var(--creme);
+  border: 3px solid var(--rosa-suave);
 }
-::-webkit-scrollbar-thumb:hover { background: var(--vermelho-escuro); }
+::-webkit-scrollbar-thumb:hover { background: var(--bordo); }
 
 /* Nav flutuante com vidro fosco ao rolar */
 .nav--fixa {
@@ -947,15 +1032,15 @@ img, svg { max-width: 100%; display: block; }
   width: 100%;
   margin: 0;
   padding: 12px max(4vw, calc((100vw - 1120px) / 2));
-  background: rgba(251, 246, 236, 0.93);
+  background: rgba(251, 237, 242, 0.93);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 6px 24px rgba(91, 56, 36, 0.14);
+  box-shadow: 0 6px 24px rgba(122, 48, 72, 0.14);
   animation: descer 0.35s ease;
 }
 
 .nav--fixa .nav__logo-circle { width: 42px; height: 42px; }
-.nav--fixa .nav__logo-text { font-size: 0.85rem; }
+.nav--fixa .nav__logo-script { font-size: 1.4rem; }
 .nav--fixa .nav__menu { top: 70px; }
 
 @keyframes descer {
@@ -971,14 +1056,15 @@ img, svg { max-width: 100%; display: block; }
 
 .hero__chip { animation: subir 0.7s ease 0.05s both; }
 .hero__title { animation: subir 0.7s ease 0.15s both; }
-.hero__subtitle { animation: subir 0.7s ease 0.28s both; }
-.hero__text { animation: subir 0.7s ease 0.4s both; }
-.hero__acoes { animation: subir 0.7s ease 0.55s both; }
+.hero__title-sub { animation: subir 0.7s ease 0.22s both; }
+.hero__subtitle { animation: subir 0.7s ease 0.32s both; }
+.hero__text { animation: subir 0.7s ease 0.44s both; }
+.hero__acoes { animation: subir 0.7s ease 0.58s both; }
 
-/* Confeitos flutuando no hero (vermelho, dourado e branco) */
-.confeitos { position: absolute; inset: 0; pointer-events: none; }
+/* Pétalas e confeitos flutuando no hero (rosa, dourado e branco) */
+.petalas { position: absolute; inset: 0; pointer-events: none; }
 
-.confeitos span {
+.petalas span {
   position: absolute;
   display: block;
   border-radius: 999px;
@@ -986,12 +1072,12 @@ img, svg { max-width: 100%; display: block; }
   animation: flutuar ease-in-out infinite alternate;
 }
 
-.confeitos span:nth-child(1) { top: 18%; left: 6%;  width: 10px; height: 10px; background: var(--vermelho); animation-duration: 7s; }
-.confeitos span:nth-child(2) { top: 30%; left: 38%; width: 7px;  height: 16px; background: var(--dourado); animation-duration: 9s; animation-delay: 1s; }
-.confeitos span:nth-child(3) { top: 64%; left: 12%; width: 8px;  height: 8px;  background: var(--branco); animation-duration: 6s; }
-.confeitos span:nth-child(4) { top: 14%; left: 55%; width: 6px;  height: 14px; background: var(--vermelho-escuro); animation-duration: 8s; animation-delay: 0.5s; }
-.confeitos span:nth-child(5) { bottom: 22%; left: 44%; width: 9px; height: 9px; background: var(--dourado-claro); animation-duration: 7.5s; }
-.confeitos span:nth-child(6) { top: 46%; left: 26%; width: 6px;  height: 6px;  background: var(--branco); animation-duration: 5.5s; animation-delay: 1.4s; }
+.petalas span:nth-child(1) { top: 18%; left: 6%;  width: 10px; height: 10px; background: var(--rosa-medio); animation-duration: 7s; }
+.petalas span:nth-child(2) { top: 30%; left: 38%; width: 7px;  height: 16px; background: var(--dourado); animation-duration: 9s; animation-delay: 1s; }
+.petalas span:nth-child(3) { top: 64%; left: 12%; width: 8px;  height: 8px;  background: var(--branco); animation-duration: 6s; }
+.petalas span:nth-child(4) { top: 14%; left: 55%; width: 6px;  height: 14px; background: var(--bordo); animation-duration: 8s; animation-delay: 0.5s; }
+.petalas span:nth-child(5) { bottom: 22%; left: 44%; width: 9px; height: 9px; background: var(--dourado-claro); animation-duration: 7.5s; }
+.petalas span:nth-child(6) { top: 46%; left: 26%; width: 6px;  height: 6px;  background: var(--branco); animation-duration: 5.5s; animation-delay: 1.4s; }
 
 @keyframes flutuar {
   from { transform: translateY(0) rotate(0deg); }
@@ -1000,7 +1086,7 @@ img, svg { max-width: 100%; display: block; }
 
 /* Letreiro rolante */
 .faixa {
-  background: var(--vermelho);
+  background: linear-gradient(90deg, var(--rosa-medio), var(--rosa-vivo));
   color: var(--branco);
   overflow: hidden;
   padding: 13px 0;
@@ -1037,23 +1123,21 @@ img, svg { max-width: 100%; display: block; }
   text-align: center;
 }
 
-.numero:not(:first-child) { border-left: 1px solid rgba(200, 154, 43, 0.4); }
+.numero:not(:first-child) { border-left: 1px solid rgba(216, 132, 157, 0.5); }
 
 .numero__valor {
   display: block;
-  font-family: var(--font-detalhe);
-  font-style: italic;
-  font-weight: 600;
-  font-size: 2.7rem;
+  font-family: var(--font-script);
+  font-size: 3rem;
   line-height: 1.1;
-  color: var(--vermelho);
+  color: var(--rosa-vivo);
 }
 
 .numero__label {
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--chocolate-suave);
+  color: var(--texto-suave);
 }
 
 /* Polaroids levemente tortinhas (endireitam no hover) */
@@ -1108,7 +1192,7 @@ img, svg { max-width: 100%; display: block; }
 /* Movimento reduzido: respeita a preferência do usuário */
 @media (prefers-reduced-motion: reduce) {
   .faixa__trilho,
-  .confeitos span,
+  .petalas span,
   .zap-flutuante::before { animation: none; }
   .reveal { opacity: 1; transform: rotate(var(--tilt, 0deg)); transition: none; }
 }
@@ -1119,6 +1203,7 @@ img, svg { max-width: 100%; display: block; }
 @media (max-width: 960px) {
   .hero { justify-content: center; text-align: center; }
   .hero__content { max-width: 620px; }
+  .hero__title-sub { margin-left: 0; }
   .hero__text { margin-inline: auto; }
   .hero__acoes { justify-content: center; }
   .vitrine__grid { grid-template-columns: repeat(2, 1fr); }
@@ -1132,6 +1217,7 @@ img, svg { max-width: 100%; display: block; }
 
 @media (max-width: 640px) {
   .section { padding: 60px 0; }
+  .section--compacta { padding: 36px 0 28px; }
 
   .nav__toggle { display: flex; }
 
@@ -1156,19 +1242,24 @@ img, svg { max-width: 100%; display: block; }
 
   .nav { position: relative; }
 
+  .destaques__row { gap: 18px; }
+  .destaque__circle { width: 64px; height: 64px; }
+  .destaque__circle svg { width: 28px; height: 28px; }
+
   .vitrine__grid { grid-template-columns: 1fr; }
   .catalogo__grid { grid-template-columns: repeat(2, 1fr); }
   .pedido__row { grid-template-columns: 1fr; }
-  .footer__layout { flex-direction: column; text-align: center; }
+  .footer__layout { flex-direction: column; text-align: center; align-items: center; }
+  .footer__logo { align-items: center; }
 
   .floral { display: none; }
-  .confeitos { display: none; }
+  .petalas { display: none; }
   .hero { min-height: 74vh; padding-bottom: 90px; }
   .faixa__trilho { font-size: 0.72rem; }
   .numeros { grid-template-columns: 1fr; gap: 18px; }
   .numero:not(:first-child) {
     border-left: none;
-    border-top: 1px solid rgba(200, 154, 43, 0.4);
+    border-top: 1px solid rgba(216, 132, 157, 0.5);
     padding-top: 16px;
   }
   .zap-flutuante { width: 52px; height: 52px; right: 18px; bottom: 18px; }

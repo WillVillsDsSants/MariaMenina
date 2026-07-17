@@ -1,5 +1,5 @@
 // ==========================================================
-// Castelo dos Bolos — interações do site
+// D'Naty Confeitaria — interações do site
 // ==========================================================
 
 // ----- Menu mobile -----
@@ -84,7 +84,7 @@ reiniciarDepoAutoplay();
 
 // ----- Revelação dos elementos ao rolar a página -----
 const alvosReveal = document.querySelectorAll(
-  '.card, .produto, .numero, .passo, .recheios, .sobre__text, .sobre__assinatura, ' +
+  '.destaque, .card, .produto, .numero, .passo, .recheios, .sobre__text, .sobre__assinatura, ' +
   '.oferta__card, .oferta__img, .contato__img, .contato__card, .pedido__form'
 );
 
@@ -112,8 +112,8 @@ const observador = new IntersectionObserver((entradas) => {
 alvosReveal.forEach((el) => observador.observe(el));
 
 // ----- Formulário → WhatsApp -----
-// Troque pelo número real do Castelo dos Bolos (DDI + DDD + número, só dígitos)
-const WHATSAPP_NUMERO = '5511999999999';
+// Troque pelo número real da D'Naty Confeitaria (DDI + DDD + número, só dígitos)
+const WHATSAPP_NUMERO = '5514999999999';
 
 document.getElementById('pedidoForm').addEventListener('submit', (e) => {
   e.preventDefault();
@@ -125,7 +125,7 @@ document.getElementById('pedidoForm').addEventListener('submit', (e) => {
   const tipo = dados.get('tipo') || '';
   const mensagem = dados.get('mensagem') || '';
 
-  let texto = `Olá, Castelo dos Bolos! 🏰🎂\n\nMeu nome é ${nome} e gostaria de fazer uma encomenda.\n`;
+  let texto = `Olá, D'Naty Confeitaria! 🎀🎂\n\nMeu nome é ${nome} e gostaria de fazer uma encomenda.\n`;
   texto += `\n*O que desejo:* ${tipo}`;
   if (data) {
     const [ano, mes, dia] = data.split('-');
