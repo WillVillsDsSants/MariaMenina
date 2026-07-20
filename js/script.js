@@ -1,5 +1,5 @@
 // ==========================================================
-// D'Naty Confeitaria — interações do site
+// Doces Maria Menina — interações do site
 // ==========================================================
 
 // ----- Menu mobile -----
@@ -19,7 +19,7 @@ navMenu.addEventListener('click', (e) => {
 });
 
 // ----- Link ativo no menu + nav flutuante conforme rolagem -----
-const secoes = ['inicio', 'catalogo', 'galeria', 'sobre', 'contato'];
+const secoes = ['inicio', 'vitrine', 'catalogo', 'galeria', 'sobre', 'contato'];
 const links = document.querySelectorAll('.nav__link');
 const nav = document.querySelector('.nav');
 
@@ -97,7 +97,7 @@ const observador = new IntersectionObserver((entradas) => {
     const irmaos = Array.from(el.parentElement.children).filter((c) => c.classList.contains('reveal'));
     const indice = Math.max(irmaos.indexOf(el), 0);
 
-    el.style.transitionDelay = `${indice * 90}ms`;
+    el.style.transitionDelay = `${indice * 70}ms`;
     el.classList.add('reveal--on');
     observador.unobserve(el);
 
@@ -105,14 +105,15 @@ const observador = new IntersectionObserver((entradas) => {
     setTimeout(() => {
       el.classList.remove('reveal', 'reveal--on');
       el.style.transitionDelay = '';
-    }, 1100 + indice * 90);
+    }, 900 + indice * 70);
   });
 }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
 
 alvosReveal.forEach((el) => observador.observe(el));
 
 // ----- Formulário → WhatsApp -----
-const WHATSAPP_NUMERO = '5514997154069';
+// Troque pelo número real da Doces Maria Menina (DDI + DDD + número, só dígitos)
+const WHATSAPP_NUMERO = '5511999999999';
 
 document.getElementById('pedidoForm').addEventListener('submit', (e) => {
   e.preventDefault();
@@ -124,7 +125,7 @@ document.getElementById('pedidoForm').addEventListener('submit', (e) => {
   const tipo = dados.get('tipo') || '';
   const mensagem = dados.get('mensagem') || '';
 
-  let texto = `Olá, D'Naty Confeitaria! 🎀🎂\n\nMeu nome é ${nome} e gostaria de fazer uma encomenda.\n`;
+  let texto = `Olá, Doces Maria Menina! 🎂\n\nMeu nome é ${nome} e gostaria de fazer uma encomenda.\n`;
   texto += `\n*O que desejo:* ${tipo}`;
   if (data) {
     const [ano, mes, dia] = data.split('-');

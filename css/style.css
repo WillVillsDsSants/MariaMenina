@@ -1,29 +1,28 @@
 /* ============================================================
-   D'Naty Confeitaria — identidade visual
-   Rosa claro #F8D9E3 | Rosa médio #D8849D | Bordô #7A3048
-   Dourado #D4AF37 | Branco #FFFFFF
+   Doces Maria Menina — identidade visual
+   Branco #FFFFFF | Creme #F8F3EA | Dourado #D8B24C
+   Marrom Chocolate #5D3A2A | Verde natural #6B8E4E
    Fontes: Great Vibes (script) + Playfair Display (títulos)
            + Montserrat (textos)
    ============================================================ */
 
 :root {
-  --rosa-claro: #F8D9E3;
-  --rosa-suave: #FBEDF2;
-  --rosa-medio: #D8849D;
-  --rosa-vivo: #C96F8B;
-  --bordo: #7A3048;
-  --bordo-escuro: #5E2437;
-  --dourado: #D4AF37;
-  --dourado-claro: #E8CF7F;
-  --dourado-escuro: #B3922B;
+  --creme: #F8F3EA;
+  --creme-suave: #FCF9F3;
+  --dourado: #D8B24C;
+  --dourado-claro: #E9CE8B;
+  --dourado-escuro: #B4903A;
+  --chocolate: #5D3A2A;
+  --chocolate-escuro: #452A1E;
+  --verde: #6B8E4E;
   --branco: #FFFFFF;
-  --texto: #5E4450;
-  --texto-suave: #8A6E7A;
+  --texto: #4A3F36;
+  --texto-suave: #8C8175;
   --font-script: 'Great Vibes', cursive;
   --font-titulo: 'Playfair Display', serif;
   --font-sans: 'Montserrat', sans-serif;
-  --sombra: 0 12px 30px rgba(122, 48, 72, 0.14);
-  --raio: 20px;
+  --sombra: 0 16px 36px rgba(93, 58, 42, 0.12);
+  --raio: 16px;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -34,7 +33,7 @@ body {
   font-family: var(--font-sans);
   font-weight: 300;
   color: var(--texto);
-  background: var(--rosa-suave);
+  background: var(--branco);
   line-height: 1.7;
 }
 
@@ -47,7 +46,7 @@ img, svg { max-width: 100%; display: block; }
 
 .container--narrow { width: min(760px, 92%); }
 
-.section { padding: 84px 0; }
+.section { padding: 88px 0; }
 .section--compacta { padding: 44px 0 36px; }
 
 /* Palavra em script acima dos títulos de seção */
@@ -55,19 +54,19 @@ img, svg { max-width: 100%; display: block; }
   display: block;
   font-family: var(--font-script);
   font-size: clamp(1.7rem, 3.2vw, 2.3rem);
-  color: var(--rosa-medio);
+  color: var(--dourado-escuro);
   text-align: center;
   line-height: 1;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .section__title {
   font-family: var(--font-titulo);
   font-weight: 600;
-  font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+  font-size: clamp(1.8rem, 3.6vw, 2.5rem);
   letter-spacing: 0.01em;
   text-align: center;
-  color: var(--bordo);
+  color: var(--chocolate);
   margin-bottom: 16px;
 }
 
@@ -85,93 +84,67 @@ img, svg { max-width: 100%; display: block; }
   gap: 8px;
   font-family: var(--font-sans);
   font-weight: 500;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
   padding: 14px 34px;
-  border-radius: 999px;
-  border: none;
+  border-radius: 6px;
+  border: 1.4px solid transparent;
   cursor: pointer;
   text-decoration: none;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 
 .btn:hover { transform: translateY(-2px); box-shadow: var(--sombra); }
-
-/* Brilho que atravessa o botão principal */
-.btn--principal::after,
-.btn--dourado::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(105deg, transparent 40%, rgba(255, 255, 255, 0.35) 50%, transparent 60%);
-  transform: translateX(-130%);
-  transition: transform 0.6s ease;
-}
-
-.btn--principal:hover::after,
-.btn--dourado:hover::after { transform: translateX(130%); }
 
 .btn__seta { transition: transform 0.25s ease; }
 .btn:hover .btn__seta { transform: translateX(4px); }
 
 .btn--principal {
-  background: linear-gradient(180deg, var(--rosa-medio), var(--bordo));
+  background: var(--chocolate);
   color: var(--branco);
-  border: 1px solid rgba(232, 207, 127, 0.55);
+  border-color: var(--chocolate);
 }
-.btn--principal:hover { background: linear-gradient(180deg, var(--rosa-vivo), var(--bordo-escuro)); }
+.btn--principal:hover { background: var(--chocolate-escuro); border-color: var(--chocolate-escuro); }
 
 .btn--mini { padding: 10px 22px; font-size: 0.8rem; }
 
 .btn--dourado {
-  background: linear-gradient(180deg, var(--dourado-claro), var(--dourado));
-  color: var(--bordo-escuro);
+  background: var(--dourado);
+  color: var(--chocolate-escuro);
+  border-color: var(--dourado);
   font-weight: 600;
 }
+.btn--dourado:hover { background: var(--dourado-escuro); }
 
 .btn--outline-light {
   background: transparent;
   color: var(--branco);
-  border: 1.5px solid rgba(232, 207, 127, 0.85);
+  border-color: rgba(255, 255, 255, 0.7);
 }
 .btn--outline-light:hover { background: rgba(255, 255, 255, 0.14); }
 
 .btn--ghost {
-  background: rgba(255, 255, 255, 0.7);
-  color: var(--bordo);
-  border: 1.5px solid var(--rosa-medio);
+  background: transparent;
+  color: var(--chocolate);
+  border-color: var(--chocolate);
 }
-.btn--ghost:hover { background: var(--branco); }
+.btn--ghost:hover { background: var(--chocolate); color: var(--branco); }
 
 /* ============================================================
-   HEADER + NAV — foto grande de bolo com véu rosa
+   HEADER + NAV — foto de bolo com véu creme
    ============================================================ */
 .header {
   position: relative;
-  background-color: var(--rosa-claro);
+  background-color: var(--creme);
   background-image:
-    linear-gradient(180deg, rgba(248, 217, 227, 0.94) 0%, rgba(248, 217, 227, 0) 26%),
-    linear-gradient(90deg, rgba(251, 237, 242, 0.98) 0%, rgba(248, 217, 227, 0.92) 34%, rgba(248, 217, 227, 0.45) 62%, rgba(248, 217, 227, 0.08) 100%),
-    url("https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=1600&q=80&auto=format&fit=crop");
+    linear-gradient(180deg, rgba(248, 243, 234, 0.9) 0%, rgba(248, 243, 234, 0) 26%),
+    linear-gradient(90deg, rgba(252, 249, 243, 0.98) 0%, rgba(248, 243, 234, 0.94) 34%, rgba(248, 243, 234, 0.5) 62%, rgba(248, 243, 234, 0.1) 100%),
+    url("https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=1600&q=80&auto=format&fit=crop");
   background-size: auto, auto, cover;
   background-position: center, center, center right;
   background-repeat: no-repeat;
   overflow: hidden;
-}
-
-/* Borda rendada (scallop) desaguando na faixa rosa */
-.header::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -1px;
-  height: 18px;
-  background-image: radial-gradient(circle at 12px -8px, transparent 12px, var(--rosa-medio) 12.5px);
-  background-size: 24px 18px;
-  background-repeat: repeat-x;
-  z-index: 2;
+  border-bottom: 1px solid rgba(180, 144, 58, 0.22);
 }
 
 .nav {
@@ -188,60 +161,59 @@ img, svg { max-width: 100%; display: block; }
   align-items: center;
   gap: 12px;
   text-decoration: none;
-  color: var(--bordo);
+  color: var(--chocolate);
 }
 
 .nav__logo-circle {
-  width: 52px;
-  height: 52px;
-  border: 1.6px solid var(--dourado);
+  width: 50px;
+  height: 50px;
+  border: 1.4px solid var(--dourado);
   border-radius: 50%;
   display: grid;
   place-items: center;
-  background: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.7);
   color: var(--dourado-escuro);
-  box-shadow: 0 0 0 4px rgba(216, 132, 157, 0.18);
 }
 
 .nav__logo-text {
   display: flex;
   flex-direction: column;
-  line-height: 1;
+  line-height: 1.1;
 }
 
 .nav__logo-script {
   font-family: var(--font-script);
   font-size: 1.7rem;
-  color: var(--bordo);
+  color: var(--chocolate);
 }
 
 .nav__logo-sub {
-  font-size: 0.62rem;
+  font-size: 0.58rem;
   font-weight: 500;
-  letter-spacing: 0.34em;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--rosa-medio);
-  margin-top: 3px;
+  color: var(--dourado-escuro);
+  margin-top: 2px;
 }
 
 .nav__menu {
   display: flex;
   align-items: center;
-  gap: 34px;
+  gap: 32px;
   list-style: none;
 }
 
 .nav__link {
   text-decoration: none;
   color: var(--texto);
-  font-size: 0.95rem;
+  font-size: 0.93rem;
   font-weight: 400;
   padding-bottom: 5px;
   border-bottom: 2px solid transparent;
   transition: border-color 0.25s ease, color 0.25s ease;
 }
 
-.nav__link:hover, .nav__link--active { border-color: var(--rosa-medio); color: var(--bordo); }
+.nav__link:hover, .nav__link--active { border-color: var(--dourado); color: var(--chocolate); }
 
 .nav__toggle {
   display: none;
@@ -256,7 +228,7 @@ img, svg { max-width: 100%; display: block; }
 .nav__toggle span {
   width: 24px;
   height: 2px;
-  background: var(--bordo);
+  background: var(--chocolate);
   border-radius: 2px;
 }
 
@@ -269,7 +241,7 @@ img, svg { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   min-height: min(82vh, 700px);
-  padding: 48px 0 110px;
+  padding: 48px 0 96px;
 }
 
 .hero__content { max-width: 600px; }
@@ -277,44 +249,46 @@ img, svg { max-width: 100%; display: block; }
 .hero__chip {
   display: inline-block;
   background: rgba(255, 255, 255, 0.85);
-  color: var(--bordo);
-  font-size: 0.8rem;
+  color: var(--chocolate);
+  font-size: 0.78rem;
   font-weight: 500;
+  letter-spacing: 0.08em;
   padding: 8px 20px;
   border-radius: 999px;
-  border: 1px solid rgba(212, 175, 55, 0.5);
-  box-shadow: 0 4px 14px rgba(122, 48, 72, 0.1);
-  margin-bottom: 18px;
+  border: 1px solid rgba(216, 178, 76, 0.5);
+  margin-bottom: 20px;
 }
 
 .hero__title {
   font-family: var(--font-script);
   font-weight: 400;
-  font-size: clamp(4rem, 9.5vw, 6.4rem);
+  font-size: clamp(3.6rem, 8vw, 5.8rem);
   line-height: 1;
-  color: var(--bordo);
+  color: var(--chocolate);
 }
 
 .hero__title-sub {
-  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  font-size: clamp(0.85rem, 2vw, 1.05rem);
   font-weight: 500;
-  letter-spacing: 0.5em;
+  letter-spacing: 0.42em;
   text-transform: uppercase;
-  color: var(--rosa-medio);
-  margin: 4px 0 0 8px;
+  color: var(--dourado-escuro);
+  margin: 6px 0 0 6px;
 }
 
 .hero__subtitle {
-  font-family: var(--font-script);
-  font-size: clamp(1.5rem, 3vw, 1.9rem);
-  color: var(--rosa-vivo);
-  line-height: 1.25;
+  font-family: var(--font-titulo);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.2rem, 2.4vw, 1.55rem);
+  color: var(--dourado-escuro);
+  line-height: 1.3;
   margin: 18px 0 14px;
 }
 
 .hero__text {
   max-width: 46ch;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
   color: var(--texto-suave);
 }
 
@@ -331,7 +305,7 @@ img, svg { max-width: 100%; display: block; }
 .cake-photo {
   border-radius: var(--raio);
   overflow: hidden;
-  background: linear-gradient(145deg, #fdeef4, #f6d3df);
+  background: var(--creme);
   position: relative;
 }
 
@@ -343,22 +317,6 @@ img, svg { max-width: 100%; display: block; }
 }
 
 .cake-photo--sq { aspect-ratio: 1 / 1; }
-
-/* Brilho que atravessa a foto no hover */
-.cake-photo::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(105deg, transparent 40%, rgba(255, 255, 255, 0.4) 50%, transparent 60%);
-  transform: translateX(-130%);
-  transition: transform 0.7s ease;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.produto:hover .cake-photo::after,
-.oferta__img:hover::after,
-.contato__img:hover::after { transform: translateX(130%); }
 
 /* ============================================================
    DESTAQUES — círculos no estilo dos destaques do Instagram
@@ -384,30 +342,29 @@ img, svg { max-width: 100%; display: block; }
 .destaque:hover { transform: translateY(-4px); }
 
 .destaque__circle {
-  width: 78px;
-  height: 78px;
+  width: 74px;
+  height: 74px;
   border-radius: 50%;
-  background: linear-gradient(160deg, #fdf1f5, var(--rosa-claro));
-  color: var(--bordo);
+  background: var(--creme);
+  color: var(--chocolate);
   display: grid;
   place-items: center;
-  border: 2px solid var(--branco);
-  box-shadow: 0 0 0 2px var(--rosa-medio), 0 8px 18px rgba(122, 48, 72, 0.12);
-  transition: box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease;
+  border: 1.4px solid var(--dourado);
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 
-.destaque__circle svg { width: 34px; height: 34px; }
+.destaque__circle svg { width: 32px; height: 32px; }
 
 .destaque:hover .destaque__circle {
-  background: linear-gradient(160deg, var(--rosa-medio), var(--bordo));
-  color: var(--branco);
-  box-shadow: 0 0 0 2px var(--dourado), 0 10px 22px rgba(122, 48, 72, 0.24);
+  background: var(--chocolate);
+  color: var(--dourado-claro);
+  border-color: var(--chocolate);
 }
 
 .destaque__label {
   font-size: 0.78rem;
   font-weight: 500;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   color: var(--texto);
 }
 
@@ -428,15 +385,15 @@ img, svg { max-width: 100%; display: block; }
 }
 
 .esp--grande  { grid-area: grande; }
-.esp--bordo   { grid-area: finos; }
-.esp--rosa    { grid-area: festa; }
+.esp--escura  { grid-area: finos; }
+.esp--clara   { grid-area: festa; }
 .esp--alta    { grid-area: casam; }
 .esp--caseiro { grid-area: caseiro; }
 .esp--chamada { grid-area: chamada; }
 
 .esp {
   position: relative;
-  border-radius: 22px;
+  border-radius: var(--raio);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -450,7 +407,7 @@ img, svg { max-width: 100%; display: block; }
   font-family: var(--font-titulo);
   font-weight: 600;
   font-size: 1.2rem;
-  color: var(--bordo);
+  color: var(--chocolate);
   margin-bottom: 4px;
 }
 
@@ -461,7 +418,7 @@ img, svg { max-width: 100%; display: block; }
 }
 
 /* --- Tiles fotográficos: imagem de fundo + véu + texto sobreposto --- */
-.esp--foto { background: var(--rosa-claro); }
+.esp--foto { background: var(--creme); }
 
 .esp--foto img {
   position: absolute;
@@ -477,7 +434,7 @@ img, svg { max-width: 100%; display: block; }
 .esp__veu {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(94, 36, 55, 0.05) 35%, rgba(94, 36, 55, 0.88) 100%);
+  background: linear-gradient(180deg, rgba(69, 42, 30, 0.05) 35%, rgba(69, 42, 30, 0.86) 100%);
 }
 
 .esp--foto .esp__conteudo {
@@ -494,8 +451,8 @@ img, svg { max-width: 100%; display: block; }
 
 .esp__tag {
   display: inline-block;
-  background: linear-gradient(180deg, var(--dourado), var(--dourado-escuro));
-  color: #4a2e17;
+  background: var(--dourado);
+  color: var(--chocolate-escuro);
   font-size: 0.66rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -539,38 +496,37 @@ img, svg { max-width: 100%; display: block; }
   flex-shrink: 0;
 }
 
-.esp--bordo {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1.6px, transparent 1.7px), linear-gradient(170deg, var(--bordo), var(--bordo-escuro));
-  background-size: 22px 22px, cover;
+.esp--escura {
+  background: var(--chocolate);
 }
 
-.esp--bordo .esp__titulo { color: var(--dourado-claro); }
-.esp--bordo .esp__texto { color: rgba(255, 255, 255, 0.85); }
-.esp--bordo .esp__icone { background: rgba(255, 255, 255, 0.12); color: var(--dourado-claro); }
+.esp--escura .esp__titulo { color: var(--dourado-claro); }
+.esp--escura .esp__texto { color: rgba(255, 255, 255, 0.85); }
+.esp--escura .esp__icone { background: rgba(255, 255, 255, 0.12); color: var(--dourado-claro); }
 
-.esp--rosa {
-  background: linear-gradient(160deg, #fdf1f5, var(--rosa-claro));
-  border: 1px solid rgba(216, 132, 157, 0.35);
+.esp--clara {
+  background: var(--creme);
+  border: 1px solid rgba(180, 144, 58, 0.3);
 }
 
-.esp--rosa .esp__icone {
+.esp--clara .esp__icone {
   background: var(--branco);
-  color: var(--bordo);
-  box-shadow: 0 6px 14px rgba(122, 48, 72, 0.12);
+  color: var(--chocolate);
+  border: 1px solid rgba(180, 144, 58, 0.3);
 }
 
-/* --- Tile horizontal do bolo caseiro --- */
+/* --- Tile horizontal --- */
 .esp--caseiro {
   flex-direction: row;
   align-items: center;
   gap: 20px;
   background: var(--branco);
-  border: 1.6px dashed var(--dourado);
+  border: 1.4px solid var(--dourado);
 }
 
 .esp--caseiro .esp__icone {
   margin-bottom: 0;
-  background: linear-gradient(160deg, #fdf6e3, #f5e7bd);
+  background: var(--creme);
   color: var(--dourado-escuro);
 }
 
@@ -578,11 +534,11 @@ img, svg { max-width: 100%; display: block; }
   position: absolute;
   top: 14px;
   right: 14px;
-  background: linear-gradient(180deg, var(--dourado), var(--dourado-escuro));
-  color: #4a2e17;
+  background: var(--dourado);
+  color: var(--chocolate-escuro);
   font-size: 0.62rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 5px 11px;
   border-radius: 999px;
@@ -590,8 +546,7 @@ img, svg { max-width: 100%; display: block; }
 
 /* --- Tile de chamada --- */
 .esp--chamada {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1.6px, transparent 1.7px), linear-gradient(120deg, var(--rosa-medio), var(--bordo));
-  background-size: 22px 22px, cover;
+  background: var(--chocolate);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -603,57 +558,43 @@ img, svg { max-width: 100%; display: block; }
 
 .esp__script {
   font-family: var(--font-script);
-  font-size: clamp(1.7rem, 2.6vw, 2.1rem);
+  font-size: clamp(1.8rem, 2.8vw, 2.2rem);
   line-height: 1.15;
-  color: var(--branco);
+  color: var(--dourado-claro);
   max-width: 16ch;
 }
 
 /* ============================================================
    CATÁLOGO
    ============================================================ */
-.catalogo { background: var(--rosa-claro); position: relative; }
-
-/* Rendinha branca no topo, costurando com a seção anterior */
-.catalogo::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 16px;
-  background-image: radial-gradient(circle at 12px 0, var(--branco) 12px, transparent 12.5px);
-  background-size: 24px 16px;
-  background-repeat: repeat-x;
-}
+.catalogo { background: var(--creme); position: relative; }
 
 .catalogo__tabs {
   display: flex;
   justify-content: center;
-  gap: 14px;
+  gap: 12px;
   flex-wrap: wrap;
   margin: 26px 0 44px;
 }
 
 .catalogo__tab {
   background: var(--branco);
-  border: 1px solid rgba(216, 132, 157, 0.4);
+  border: 1.3px solid rgba(180, 144, 58, 0.5);
   font-family: var(--font-sans);
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   font-weight: 500;
   color: var(--texto-suave);
   cursor: pointer;
-  padding: 11px 26px;
+  padding: 10px 24px;
   border-radius: 999px;
-  box-shadow: 0 4px 12px rgba(122, 48, 72, 0.08);
-  transition: color 0.25s ease, background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  transition: color 0.25s ease, background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
 }
 
-.catalogo__tab:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(122, 48, 72, 0.14); }
+.catalogo__tab:hover { transform: translateY(-2px); border-color: var(--chocolate); color: var(--chocolate); }
 
 .catalogo__tab--active {
-  background: linear-gradient(180deg, var(--rosa-medio), var(--bordo));
-  border-color: transparent;
+  background: var(--chocolate);
+  border-color: var(--chocolate);
   color: var(--branco);
 }
 
@@ -665,7 +606,7 @@ img, svg { max-width: 100%; display: block; }
 }
 
 .recheios {
-  background: linear-gradient(170deg, var(--bordo), var(--bordo-escuro));
+  background: var(--chocolate);
   color: var(--branco);
   border-radius: var(--raio);
   padding: 38px 32px;
@@ -682,7 +623,7 @@ img, svg { max-width: 100%; display: block; }
 
 .recheios__text {
   font-size: 0.85rem;
-  opacity: 0.92;
+  opacity: 0.9;
   margin-bottom: 22px;
 }
 
@@ -694,14 +635,15 @@ img, svg { max-width: 100%; display: block; }
 .recheios__list li {
   padding: 9px 0;
   font-size: 0.9rem;
-  border-bottom: 1px solid rgba(232, 207, 127, 0.3);
+  border-bottom: 1px solid rgba(232, 207, 127, 0.25);
 }
 
 .recheios__list li:last-child { border-bottom: none; }
 
 .recheios__obs {
-  font-family: var(--font-script);
-  font-size: 1.3rem;
+  font-family: var(--font-titulo);
+  font-style: italic;
+  font-size: 1.02rem;
   color: var(--dourado-claro);
   margin-bottom: 24px;
 }
@@ -719,21 +661,21 @@ img, svg { max-width: 100%; display: block; }
   to { opacity: 1; transform: none; }
 }
 
-/* Produtos em moldura polaroid */
+/* Produtos */
 .produto {
   background: var(--branco);
   padding: 12px 12px 18px;
-  border-radius: 14px;
-  border: 1px solid rgba(216, 132, 157, 0.3);
-  box-shadow: 0 8px 20px rgba(122, 48, 72, 0.09);
+  border-radius: 12px;
+  border: 1px solid rgba(180, 144, 58, 0.25);
+  box-shadow: 0 8px 20px rgba(93, 58, 42, 0.06);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .produto:hover {
-  transform: translateY(-6px) rotate(0deg);
-  box-shadow: 0 14px 30px rgba(122, 48, 72, 0.16);
-  border-color: rgba(216, 132, 157, 0.7);
+  transform: translateY(-6px);
+  box-shadow: var(--sombra);
+  border-color: rgba(180, 144, 58, 0.6);
 }
 
 .produto .cake-photo { border-radius: 9px; }
@@ -742,20 +684,22 @@ img, svg { max-width: 100%; display: block; }
   margin-top: 12px;
   font-size: 0.88rem;
   font-weight: 500;
-  color: var(--texto);
+  color: var(--chocolate);
   line-height: 1.4;
 }
 
 .produto__preco {
   display: block;
-  font-family: var(--font-script);
-  font-size: 1.25rem;
-  color: var(--rosa-vivo);
-  margin-top: 3px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--dourado-escuro);
+  margin-top: 4px;
 }
 
 /* ============================================================
-   COMO ENCOMENDAR — passos ligados por linha pontilhada
+   COMO ENCOMENDAR — passos ligados por linha
    ============================================================ */
 .passos { background: var(--branco); }
 
@@ -767,14 +711,13 @@ img, svg { max-width: 100%; display: block; }
   position: relative;
 }
 
-/* Linha pontilhada conectando os números */
 .passos__grid::before {
   content: "";
   position: absolute;
   top: 32px;
   left: 18%;
   right: 18%;
-  border-top: 2px dashed rgba(212, 175, 55, 0.55);
+  border-top: 1.5px dashed rgba(216, 178, 76, 0.6);
 }
 
 .passo { text-align: center; padding: 0 10px; position: relative; }
@@ -785,26 +728,27 @@ img, svg { max-width: 100%; display: block; }
   margin: 0 auto 18px;
   display: grid;
   place-items: center;
-  background: linear-gradient(160deg, #fdf1f5, #f8dbe5);
-  border: 1.6px dashed var(--dourado);
+  background: var(--creme);
+  border: 1.4px solid var(--dourado);
   border-radius: 50%;
-  font-family: var(--font-script);
-  font-size: 1.9rem;
-  color: var(--bordo);
+  font-family: var(--font-titulo);
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--chocolate);
   position: relative;
   z-index: 1;
   box-shadow: 0 0 0 8px var(--branco);
   transition: transform 0.3s ease;
 }
 
-.passo:hover .passo__num { transform: scale(1.1) rotate(-6deg); }
+.passo:hover .passo__num { transform: scale(1.08); }
 
 .passo h3 {
   font-family: var(--font-titulo);
   font-size: 1.08rem;
   font-weight: 600;
   margin-bottom: 8px;
-  color: var(--bordo);
+  color: var(--chocolate);
 }
 
 .passo p { font-size: 0.88rem; color: var(--texto-suave); }
@@ -813,21 +757,21 @@ img, svg { max-width: 100%; display: block; }
    SOBRE — com assinatura em marca-d'água
    ============================================================ */
 .sobre {
-  background: var(--rosa-suave);
+  background: var(--creme);
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 
 .sobre::before {
-  content: "D'Naty";
+  content: "Maria Menina";
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-6deg);
   font-family: var(--font-script);
-  font-size: clamp(9rem, 22vw, 16rem);
-  color: rgba(216, 132, 157, 0.1);
+  font-size: clamp(6rem, 16vw, 13rem);
+  color: rgba(180, 144, 58, 0.08);
   white-space: nowrap;
   pointer-events: none;
 }
@@ -839,7 +783,7 @@ img, svg { max-width: 100%; display: block; }
 .sobre__assinatura {
   font-family: var(--font-script);
   font-size: 2.6rem;
-  color: var(--bordo);
+  color: var(--dourado-escuro);
   margin-top: 30px;
 }
 
@@ -856,7 +800,7 @@ img, svg { max-width: 100%; display: block; }
 }
 
 .oferta__card {
-  background: linear-gradient(170deg, var(--bordo), var(--bordo-escuro));
+  background: var(--chocolate);
   color: var(--branco);
   border-radius: var(--raio);
   padding: 48px 42px;
@@ -875,23 +819,23 @@ img, svg { max-width: 100%; display: block; }
   color: var(--dourado-claro);
 }
 
-.oferta__text { font-size: 0.93rem; opacity: 0.95; }
+.oferta__text { font-size: 0.93rem; opacity: 0.92; }
 
 .oferta__img { min-height: 300px; }
 
 /* ============================================================
    GALERIA — feed do Instagram
    ============================================================ */
-.galeria { background: var(--rosa-suave); }
+.galeria { background: var(--creme); }
 
 .galeria__arroba {
-  color: var(--bordo);
+  color: var(--chocolate);
   font-weight: 600;
   text-decoration: none;
-  border-bottom: 1.5px solid var(--dourado);
+  border-bottom: 1.4px solid var(--dourado);
 }
 
-.galeria__arroba:hover { color: var(--rosa-vivo); }
+.galeria__arroba:hover { color: var(--dourado-escuro); }
 
 .galeria__grid {
   display: grid;
@@ -902,10 +846,10 @@ img, svg { max-width: 100%; display: block; }
 .galeria__item {
   position: relative;
   overflow: hidden;
-  border-radius: 14px;
+  border-radius: 12px;
   aspect-ratio: 1 / 1;
   display: block;
-  box-shadow: 0 8px 20px rgba(122, 48, 72, 0.1);
+  background: var(--branco);
 }
 
 .galeria__item img {
@@ -915,14 +859,14 @@ img, svg { max-width: 100%; display: block; }
   transition: transform 0.5s ease;
 }
 
-.galeria__item:hover img { transform: scale(1.08); }
+.galeria__item:hover img { transform: scale(1.06); }
 
 .galeria__overlay {
   position: absolute;
   inset: 0;
   display: grid;
   place-items: center;
-  background: linear-gradient(180deg, rgba(216, 132, 157, 0.5), rgba(122, 48, 72, 0.65));
+  background: rgba(69, 42, 30, 0.55);
   color: var(--branco);
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -933,19 +877,7 @@ img, svg { max-width: 100%; display: block; }
 /* ============================================================
    DEPOIMENTOS — card elegante com avatar
    ============================================================ */
-.depoimentos { background: var(--rosa-claro); position: relative; }
-
-.depoimentos::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 16px;
-  background-image: radial-gradient(circle at 12px 0, var(--rosa-suave) 12px, transparent 12.5px);
-  background-size: 24px 16px;
-  background-repeat: repeat-x;
-}
+.depoimentos { background: var(--branco); }
 
 .depoimentos__carousel {
   display: flex;
@@ -960,26 +892,24 @@ img, svg { max-width: 100%; display: block; }
   display: none;
   text-align: center;
   animation: fadeIn 0.4s ease;
-  background: var(--branco);
-  border-radius: 24px;
+  background: var(--creme);
+  border-radius: var(--raio);
   padding: 52px 48px 40px;
-  box-shadow: 0 18px 40px rgba(122, 48, 72, 0.12);
-  border: 1px solid rgba(216, 132, 157, 0.25);
+  border: 1px solid rgba(180, 144, 58, 0.28);
   position: relative;
 }
 
 .depoimento--active { display: block; }
 
-/* Aspas grandes decorativas */
 .depoimento::before {
   content: "“";
   position: absolute;
   top: 30px;
   left: 34px;
-  font-family: var(--font-script);
+  font-family: var(--font-titulo);
   font-size: 4.6rem;
   line-height: 0.6;
-  color: rgba(212, 175, 55, 0.55);
+  color: rgba(216, 178, 76, 0.5);
 }
 
 .depoimento__estrelas {
@@ -1001,16 +931,16 @@ img, svg { max-width: 100%; display: block; }
 }
 
 .depoimento__avatar {
-  width: 48px;
-  height: 48px;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
   display: grid;
   place-items: center;
+  font-family: var(--font-titulo);
   font-weight: 600;
-  color: var(--branco);
-  background: linear-gradient(160deg, var(--rosa-medio), var(--bordo));
-  border: 2px solid var(--branco);
-  box-shadow: 0 0 0 1.5px var(--dourado);
+  color: var(--chocolate);
+  background: var(--branco);
+  border: 1.4px solid var(--dourado);
 }
 
 .depoimento__quem { text-align: left; line-height: 1.3; }
@@ -1020,8 +950,8 @@ img, svg { max-width: 100%; display: block; }
   font-family: var(--font-titulo);
   font-style: normal;
   font-weight: 600;
-  font-size: 1.05rem;
-  color: var(--bordo);
+  font-size: 1.02rem;
+  color: var(--chocolate);
 }
 
 .depoimento__quem small {
@@ -1032,29 +962,27 @@ img, svg { max-width: 100%; display: block; }
 .depoimentos__arrow {
   background: var(--branco);
   border: 1.4px solid var(--dourado);
-  color: var(--bordo);
+  color: var(--chocolate);
   width: 42px;
   height: 42px;
   border-radius: 50%;
   cursor: pointer;
   font-size: 1rem;
   flex-shrink: 0;
-  box-shadow: 0 6px 14px rgba(122, 48, 72, 0.12);
   transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
 
-.depoimentos__arrow:hover { background: var(--bordo); color: var(--branco); border-color: var(--bordo); transform: scale(1.08); }
+.depoimentos__arrow:hover { background: var(--chocolate); color: var(--branco); border-color: var(--chocolate); transform: scale(1.08); }
 
 /* ============================================================
-   CTA — faixa bordô "vamos adoçar a sua festa?"
+   CTA — faixa creme com moldura dourada
    ============================================================ */
 .cta {
-  background:
-    radial-gradient(rgba(255, 255, 255, 0.08) 1.6px, transparent 1.7px),
-    linear-gradient(120deg, var(--bordo), var(--bordo-escuro) 60%, #4A1C2B);
-  background-size: 22px 22px, cover;
-  color: var(--branco);
-  padding: 72px 0;
+  background: var(--creme);
+  border-top: 1px solid rgba(180, 144, 58, 0.3);
+  border-bottom: 1px solid rgba(180, 144, 58, 0.3);
+  color: var(--chocolate);
+  padding: 76px 0;
   text-align: center;
 }
 
@@ -1062,13 +990,13 @@ img, svg { max-width: 100%; display: block; }
   font-family: var(--font-script);
   font-size: clamp(2.6rem, 6vw, 4rem);
   line-height: 1.1;
-  color: var(--dourado-claro);
+  color: var(--dourado-escuro);
   margin-bottom: 10px;
 }
 
 .cta__text {
   font-size: 0.98rem;
-  opacity: 0.92;
+  color: var(--texto-suave);
   margin-bottom: 30px;
 }
 
@@ -1089,7 +1017,7 @@ img, svg { max-width: 100%; display: block; }
 }
 
 .contato__card {
-  background: linear-gradient(170deg, var(--bordo), var(--bordo-escuro));
+  background: var(--chocolate);
   color: var(--branco);
   border-radius: var(--raio);
   padding: 44px 40px;
@@ -1110,11 +1038,11 @@ img, svg { max-width: 100%; display: block; }
 
 .contato__label {
   display: block;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--dourado-claro);
-  margin-bottom: 2px;
+  margin-bottom: 3px;
 }
 
 .contato__list a {
@@ -1130,16 +1058,16 @@ img, svg { max-width: 100%; display: block; }
 /* ============================================================
    FORMULÁRIO DE ENCOMENDA
    ============================================================ */
-.pedido { background: var(--rosa-suave); }
+.pedido { background: var(--creme); }
 
 .pedido__form {
   display: grid;
   gap: 26px;
   background: var(--branco);
-  border-radius: 24px;
+  border-radius: var(--raio);
   padding: clamp(28px, 5vw, 48px);
-  border: 1px solid rgba(216, 132, 157, 0.3);
-  box-shadow: 0 18px 40px rgba(122, 48, 72, 0.1);
+  border: 1px solid rgba(180, 144, 58, 0.28);
+  box-shadow: 0 16px 36px rgba(93, 58, 42, 0.08);
 }
 
 .pedido__row {
@@ -1153,7 +1081,7 @@ img, svg { max-width: 100%; display: block; }
 .pedido__field span {
   font-size: 0.82rem;
   font-weight: 500;
-  color: var(--bordo);
+  color: var(--chocolate);
 }
 
 .pedido__field input,
@@ -1163,9 +1091,9 @@ img, svg { max-width: 100%; display: block; }
   font-size: 0.95rem;
   font-weight: 300;
   color: var(--texto);
-  background: var(--rosa-suave);
-  border: 1.5px solid transparent;
-  border-radius: 12px;
+  background: var(--creme);
+  border: 1.4px solid transparent;
+  border-radius: 10px;
   padding: 12px 14px;
   outline: none;
   transition: border-color 0.25s ease, background 0.25s ease;
@@ -1176,7 +1104,7 @@ img, svg { max-width: 100%; display: block; }
 .pedido__field input:focus,
 .pedido__field select:focus,
 .pedido__field textarea:focus {
-  border-color: var(--rosa-medio);
+  border-color: var(--dourado);
   background: var(--branco);
 }
 
@@ -1186,8 +1114,8 @@ img, svg { max-width: 100%; display: block; }
    FOOTER — três colunas
    ============================================================ */
 .footer {
-  background: linear-gradient(180deg, var(--bordo), var(--bordo-escuro));
-  color: var(--branco);
+  background: var(--chocolate);
+  color: var(--creme);
   padding: 60px 0 24px;
 }
 
@@ -1212,17 +1140,18 @@ img, svg { max-width: 100%; display: block; }
 }
 
 .footer__logo-sub {
-  font-size: 0.6rem;
+  font-size: 0.58rem;
   font-weight: 500;
-  letter-spacing: 0.34em;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--rosa-claro);
+  color: var(--creme);
+  opacity: 0.75;
   margin-top: 5px;
 }
 
 .footer__sobre {
   font-size: 0.85rem;
-  opacity: 0.85;
+  opacity: 0.82;
   max-width: 36ch;
   margin-bottom: 20px;
 }
@@ -1238,42 +1167,42 @@ img, svg { max-width: 100%; display: block; }
 .footer__nav { display: grid; gap: 8px; justify-items: start; }
 
 .footer__nav a {
-  color: var(--branco);
+  color: var(--creme);
   text-decoration: none;
   font-size: 0.88rem;
-  opacity: 0.9;
+  opacity: 0.85;
   transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
 .footer__nav a:hover { opacity: 1; transform: translateX(4px); }
 
-.footer__info { list-style: none; display: grid; gap: 10px; font-size: 0.88rem; opacity: 0.9; }
+.footer__info { list-style: none; display: grid; gap: 10px; font-size: 0.88rem; opacity: 0.85; }
 
-.footer__info a { color: var(--branco); text-decoration: none; }
+.footer__info a { color: var(--creme); text-decoration: none; }
 .footer__info a:hover { text-decoration: underline; }
 
 .footer__social { display: flex; gap: 14px; }
 
 .footer__social a {
-  color: var(--branco);
+  color: var(--creme);
   width: 40px;
   height: 40px;
-  border: 1.3px solid rgba(232, 207, 127, 0.6);
+  border: 1.3px solid rgba(232, 207, 127, 0.5);
   border-radius: 50%;
   display: grid;
   place-items: center;
   transition: background 0.25s ease, transform 0.25s ease;
 }
 
-.footer__social a:hover { background: rgba(255, 255, 255, 0.12); transform: translateY(-3px); }
+.footer__social a:hover { background: rgba(255, 255, 255, 0.1); transform: translateY(-3px); }
 
 .footer__copy {
   text-align: center;
   font-size: 0.8rem;
-  opacity: 0.75;
+  opacity: 0.7;
   margin-top: 44px;
   padding-top: 20px;
-  border-top: 1px solid rgba(248, 217, 227, 0.18);
+  border-top: 1px solid rgba(248, 243, 234, 0.15);
   width: min(1120px, 92%);
   margin-inline: auto;
 }
@@ -1282,41 +1211,14 @@ img, svg { max-width: 100%; display: block; }
    DETALHES DECORATIVOS
    ============================================================ */
 
-/* Ornamento dourado com coração sob os títulos de seção */
+/* Ornamento dourado sob os títulos de seção */
 .section__title::after {
   content: "";
   display: block;
-  width: 120px;
+  width: 116px;
   height: 12px;
   margin: 12px auto 0;
-  background: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20120%2012'%3E%3Cpath%20d='M4%206h40M76%206h40'%20stroke='%23D4AF37'%20stroke-width='1.4'%20stroke-linecap='round'/%3E%3Cpath%20d='M60%2010.5%20C56%207%2053.5%204.8%2053.5%202.9%20a2.6%202.6%200%200%201%205.2%200%20a2.6%202.6%200%200%201%205.2%200%20c0%201.9%20-2.5%204.1%20-6.5%207.6%20z'%20fill='%23D8849D'/%3E%3Ccircle%20cx='48'%20cy='6'%20r='1.6'%20fill='%23E8CF7F'/%3E%3Ccircle%20cx='72'%20cy='6'%20r='1.6'%20fill='%23E8CF7F'/%3E%3C/svg%3E") center / contain no-repeat;
-}
-
-/* Textura pontilhada suave nas seções rosa */
-.catalogo,
-.depoimentos {
-  background-image: radial-gradient(rgba(216, 132, 157, 0.22) 1.4px, transparent 1.5px);
-  background-size: 26px 26px;
-}
-
-/* Cards bordô: borda pontilhada dourada + textura de confeitos */
-.recheios,
-.oferta__card,
-.contato__card {
-  position: relative;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1.6px, transparent 1.7px), linear-gradient(170deg, var(--bordo), var(--bordo-escuro));
-  background-size: 22px 22px, cover;
-}
-
-.recheios::before,
-.oferta__card::before,
-.contato__card::before {
-  content: "";
-  position: absolute;
-  inset: 10px;
-  border: 1.5px dashed rgba(232, 207, 127, 0.55);
-  border-radius: 12px;
-  pointer-events: none;
+  background: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20120%2012'%3E%3Cpath%20d='M6%206h42M72%206h42'%20stroke='%23D8B24C'%20stroke-width='1.2'%20stroke-linecap='round'/%3E%3Cpath%20d='M60%202.6%20l1.6%203.2%203.4%200.5%20-2.5%202.4%200.6%203.4%20-3.1%20-1.6%20-3.1%201.6%200.6%20-3.4%20-2.5%20-2.4%203.4%20-0.5%20z'%20fill='%23D8B24C'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 
 /* Arabescos florais decorativos */
@@ -1325,9 +1227,9 @@ img, svg { max-width: 100%; display: block; }
 
 .floral {
   position: absolute;
-  width: 110px;
-  color: var(--rosa-medio);
-  opacity: 0.45;
+  width: 108px;
+  color: var(--dourado);
+  opacity: 0.35;
   pointer-events: none;
 }
 
@@ -1344,7 +1246,7 @@ img, svg { max-width: 100%; display: block; }
 .produto:hover .cake-photo img,
 .oferta__img:hover img,
 .contato__img:hover img {
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 
 /* Selos dourados */
@@ -1353,57 +1255,41 @@ img, svg { max-width: 100%; display: block; }
   top: 12px;
   left: 12px;
   z-index: 2;
-  background: linear-gradient(180deg, var(--dourado), var(--dourado-escuro));
-  color: #4a2e17;
+  background: var(--dourado);
+  color: var(--chocolate-escuro);
   font-size: 0.66rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 6px 12px;
   border-radius: 999px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(93, 58, 42, 0.2);
 }
 
-/* Florzinhas na lista de recheios */
+/* Marcador na lista de recheios */
 .recheios__list li::before {
-  content: "✿";
-  color: rgba(232, 207, 127, 0.85);
-  font-size: 0.72em;
+  content: "·";
+  color: var(--dourado-claro);
+  font-weight: 700;
   margin-right: 8px;
-}
-
-/* Borda rendada no topo do footer */
-.footer { position: relative; }
-
-.footer::before {
-  content: "";
-  position: absolute;
-  top: -16px;
-  left: 0;
-  right: 0;
-  height: 16px;
-  background-image: radial-gradient(circle at 12px 18px, var(--bordo) 12px, transparent 12.5px);
-  background-size: 24px 16px;
-  background-repeat: repeat-x;
 }
 
 /* ============================================================
    VIDA & MOVIMENTO
    ============================================================ */
 
-/* Seleção de texto e barra de rolagem personalizadas */
-::selection { background: var(--rosa-medio); color: var(--branco); }
+::selection { background: var(--dourado-claro); color: var(--chocolate); }
 
 ::-webkit-scrollbar { width: 12px; }
-::-webkit-scrollbar-track { background: var(--rosa-suave); }
+::-webkit-scrollbar-track { background: var(--creme); }
 ::-webkit-scrollbar-thumb {
-  background: var(--rosa-medio);
+  background: var(--dourado);
   border-radius: 8px;
-  border: 3px solid var(--rosa-suave);
+  border: 3px solid var(--creme);
 }
-::-webkit-scrollbar-thumb:hover { background: var(--bordo); }
+::-webkit-scrollbar-thumb:hover { background: var(--dourado-escuro); }
 
-/* Nav flutuante com vidro fosco ao rolar */
+/* Nav fixa ao rolar — sólida, sem blur */
 .nav--fixa {
   position: fixed;
   top: 0;
@@ -1413,16 +1299,15 @@ img, svg { max-width: 100%; display: block; }
   width: 100%;
   margin: 0;
   padding: 12px max(4vw, calc((100vw - 1120px) / 2));
-  background: rgba(251, 237, 242, 0.93);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 6px 24px rgba(122, 48, 72, 0.14);
-  animation: descer 0.35s ease;
+  background: var(--creme);
+  border-bottom: 1px solid rgba(180, 144, 58, 0.3);
+  box-shadow: 0 6px 20px rgba(93, 58, 42, 0.1);
+  animation: descer 0.3s ease;
 }
 
-.nav--fixa .nav__logo-circle { width: 42px; height: 42px; }
+.nav--fixa .nav__logo-circle { width: 40px; height: 40px; }
 .nav--fixa .nav__logo-script { font-size: 1.4rem; }
-.nav--fixa .nav__menu { top: 70px; }
+.nav--fixa .nav__menu { top: 66px; }
 
 @keyframes descer {
   from { transform: translateY(-100%); }
@@ -1431,7 +1316,7 @@ img, svg { max-width: 100%; display: block; }
 
 /* Entrada em cascata do hero */
 @keyframes subir {
-  from { opacity: 0; transform: translateY(28px); }
+  from { opacity: 0; transform: translateY(24px); }
   to { opacity: 1; transform: none; }
 }
 
@@ -1442,25 +1327,25 @@ img, svg { max-width: 100%; display: block; }
 .hero__text { animation: subir 0.7s ease 0.44s both; }
 .hero__acoes { animation: subir 0.7s ease 0.58s both; }
 
-/* Pétalas e confeitos flutuando no hero (rosa, dourado e branco) */
+/* Pétalas flutuando no hero (dourado, creme e chocolate) */
 .petalas { position: absolute; inset: 0; pointer-events: none; }
 
 .petalas span {
   position: absolute;
   display: block;
   border-radius: 999px;
-  opacity: 0.6;
+  opacity: 0.5;
   animation: flutuar ease-in-out infinite alternate;
 }
 
-.petalas span:nth-child(1) { top: 18%; left: 6%;  width: 10px; height: 10px; background: var(--rosa-medio); animation-duration: 7s; }
-.petalas span:nth-child(2) { top: 30%; left: 38%; width: 7px;  height: 16px; background: var(--dourado); animation-duration: 9s; animation-delay: 1s; }
-.petalas span:nth-child(3) { top: 64%; left: 12%; width: 8px;  height: 8px;  background: var(--branco); animation-duration: 6s; }
-.petalas span:nth-child(4) { top: 14%; left: 55%; width: 6px;  height: 14px; background: var(--bordo); animation-duration: 8s; animation-delay: 0.5s; }
-.petalas span:nth-child(5) { bottom: 22%; left: 44%; width: 9px; height: 9px; background: var(--dourado-claro); animation-duration: 7.5s; }
-.petalas span:nth-child(6) { top: 46%; left: 26%; width: 6px;  height: 6px;  background: var(--branco); animation-duration: 5.5s; animation-delay: 1.4s; }
-.petalas span:nth-child(7) { top: 24%; right: 8%; left: auto; width: 8px; height: 8px; background: var(--rosa-vivo); animation-duration: 6.5s; animation-delay: 0.8s; }
-.petalas span:nth-child(8) { bottom: 16%; right: 20%; left: auto; width: 7px; height: 13px; background: var(--dourado); animation-duration: 8.5s; animation-delay: 1.8s; }
+.petalas span:nth-child(1) { top: 18%; left: 6%;  width: 9px;  height: 9px;  background: var(--dourado); animation-duration: 7s; }
+.petalas span:nth-child(2) { top: 30%; left: 38%; width: 6px;  height: 14px; background: var(--dourado-escuro); animation-duration: 9s; animation-delay: 1s; }
+.petalas span:nth-child(3) { top: 64%; left: 12%; width: 7px;  height: 7px;  background: var(--chocolate); animation-duration: 6s; }
+.petalas span:nth-child(4) { top: 14%; left: 55%; width: 5px;  height: 12px; background: var(--dourado); animation-duration: 8s; animation-delay: 0.5s; }
+.petalas span:nth-child(5) { bottom: 22%; left: 44%; width: 8px; height: 8px; background: var(--dourado-claro); animation-duration: 7.5s; }
+.petalas span:nth-child(6) { top: 46%; left: 26%; width: 5px;  height: 5px;  background: var(--chocolate); animation-duration: 5.5s; animation-delay: 1.4s; }
+.petalas span:nth-child(7) { top: 24%; right: 8%; left: auto; width: 7px; height: 7px; background: var(--dourado-escuro); animation-duration: 6.5s; animation-delay: 0.8s; }
+.petalas span:nth-child(8) { bottom: 16%; right: 20%; left: auto; width: 6px; height: 11px; background: var(--dourado); animation-duration: 8.5s; animation-delay: 1.8s; }
 
 @keyframes flutuar {
   from { transform: translateY(0) rotate(0deg); }
@@ -1469,8 +1354,8 @@ img, svg { max-width: 100%; display: block; }
 
 /* Letreiro rolante */
 .faixa {
-  background: linear-gradient(90deg, var(--rosa-medio), var(--rosa-vivo));
-  color: var(--branco);
+  background: var(--chocolate);
+  color: var(--creme);
   overflow: hidden;
   padding: 13px 0;
 }
@@ -1478,14 +1363,14 @@ img, svg { max-width: 100%; display: block; }
 .faixa__trilho {
   display: flex;
   align-items: center;
-  gap: 34px;
+  gap: 32px;
   width: max-content;
   white-space: nowrap;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 400;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  animation: correr 26s linear infinite;
+  animation: correr 28s linear infinite;
 }
 
 .faixa__trilho span:nth-child(even) { color: var(--dourado-claro); }
@@ -1504,20 +1389,20 @@ img, svg { max-width: 100%; display: block; }
   max-width: 820px;
   margin: 0 auto 56px;
   text-align: center;
-  background: linear-gradient(160deg, #fdf1f5, var(--rosa-claro));
-  border: 1.6px dashed rgba(212, 175, 55, 0.55);
-  border-radius: 24px;
+  background: var(--creme);
+  border: 1.4px solid rgba(216, 178, 76, 0.5);
+  border-radius: var(--raio);
   padding: 30px 24px;
 }
 
-.numero:not(:first-child) { border-left: 1px solid rgba(216, 132, 157, 0.5); }
+.numero:not(:first-child) { border-left: 1px solid rgba(180, 144, 58, 0.4); }
 
 .numero__valor {
   display: block;
   font-family: var(--font-script);
   font-size: 3rem;
   line-height: 1.1;
-  color: var(--rosa-vivo);
+  color: var(--dourado-escuro);
 }
 
 .numero__label {
@@ -1527,61 +1412,43 @@ img, svg { max-width: 100%; display: block; }
   color: var(--texto-suave);
 }
 
-/* Polaroids levemente tortinhas (endireitam no hover) */
-.catalogo__grid .produto:nth-child(odd) { --tilt: -1deg; transform: rotate(var(--tilt)); }
-.catalogo__grid .produto:nth-child(even) { --tilt: 1.1deg; transform: rotate(var(--tilt)); }
-
 /* Revelação ao rolar (classes aplicadas via JS) */
 .reveal {
   opacity: 0;
-  transform: translateY(26px) rotate(var(--tilt, 0deg));
+  transform: translateY(24px);
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
 .reveal--on {
   opacity: 1;
-  transform: rotate(var(--tilt, 0deg));
+  transform: none;
 }
 
-/* WhatsApp flutuante com pulso */
+/* WhatsApp flutuante */
 .zap-flutuante {
   position: fixed;
   right: 24px;
   bottom: 24px;
   z-index: 70;
-  width: 58px;
-  height: 58px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   background: #25d366;
   color: var(--branco);
   display: grid;
   place-items: center;
-  box-shadow: 0 10px 26px rgba(37, 211, 102, 0.45);
+  box-shadow: 0 10px 24px rgba(37, 211, 102, 0.42);
   transition: transform 0.25s ease;
 }
 
-.zap-flutuante:hover { transform: scale(1.08); }
-
-.zap-flutuante::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  border: 2px solid rgba(37, 211, 102, 0.55);
-  animation: pulsar 2.2s ease-out infinite;
-}
-
-@keyframes pulsar {
-  from { transform: scale(1); opacity: 1; }
-  to { transform: scale(1.65); opacity: 0; }
-}
+.zap-flutuante:hover { transform: scale(1.06); }
 
 /* Movimento reduzido: respeita a preferência do usuário */
 @media (prefers-reduced-motion: reduce) {
   .faixa__trilho,
-  .petalas span,
-  .zap-flutuante::before { animation: none; }
-  .reveal { opacity: 1; transform: rotate(var(--tilt, 0deg)); transition: none; }
+  .petalas span { animation: none; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .hero__chip, .hero__title, .hero__title-sub, .hero__subtitle, .hero__text, .hero__acoes { animation: none; }
 }
 
 /* ============================================================
@@ -1627,13 +1494,13 @@ img, svg { max-width: 100%; display: block; }
 
   .nav__menu {
     position: absolute;
-    top: 92px;
+    top: 90px;
     right: 4%;
     background: var(--branco);
     flex-direction: column;
     align-items: stretch;
     gap: 0;
-    border-radius: 16px;
+    border-radius: 14px;
     box-shadow: var(--sombra);
     padding: 12px 0;
     min-width: 190px;
@@ -1650,10 +1517,10 @@ img, svg { max-width: 100%; display: block; }
   .nav { position: relative; }
 
   .destaques__row { gap: 16px; }
-  .destaque__circle { width: 64px; height: 64px; }
-  .destaque__circle svg { width: 28px; height: 28px; }
+  .destaque__circle { width: 62px; height: 62px; }
+  .destaque__circle svg { width: 26px; height: 26px; }
 
-  .hero { min-height: 74vh; padding-bottom: 90px; }
+  .hero { min-height: 74vh; padding-bottom: 80px; }
 
   .esp__grid {
     grid-template-columns: 1fr;
@@ -1687,11 +1554,11 @@ img, svg { max-width: 100%; display: block; }
 
   .floral { display: none; }
   .petalas { display: none; }
-  .faixa__trilho { font-size: 0.72rem; }
+  .faixa__trilho { font-size: 0.7rem; }
   .numeros { grid-template-columns: 1fr; gap: 18px; padding: 24px 20px; }
   .numero:not(:first-child) {
     border-left: none;
-    border-top: 1px solid rgba(216, 132, 157, 0.5);
+    border-top: 1px solid rgba(180, 144, 58, 0.4);
     padding-top: 16px;
   }
   .zap-flutuante { width: 52px; height: 52px; right: 18px; bottom: 18px; }
