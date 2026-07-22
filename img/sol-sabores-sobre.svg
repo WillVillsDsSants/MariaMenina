@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600" role="img" aria-label="Foto da confeiteira da Sol Sabores">
+  <rect width="600" height="600" fill="#FCE4EB"/>
+  <circle cx="300" cy="255" r="120" fill="#F6C1D0"/>
+  <path d="M300 200a55 55 0 1 0 0 110 55 55 0 0 0 0-110zm0 130c-62 0-112 34-112 76v14h224v-14c0-42-50-76-112-76z" fill="#E98FA8"/>
+  <text x="300" y="470" text-anchor="middle" font-family="'Great Vibes', cursive" font-size="58" fill="#A94363">Sol Sabores</text>
+  <text x="300" y="512" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="18" letter-spacing="1" fill="#5A3830">adicione a foto: img/sol-sabores-sobre.jpg</text>
+</svg>

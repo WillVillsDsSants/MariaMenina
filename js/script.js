@@ -1,5 +1,5 @@
 // ==========================================================
-// Doces Maria Menina — interações do site
+// Sol Sabores — interações do site
 // ==========================================================
 
 // ----- Menu mobile -----
@@ -112,8 +112,8 @@ const observador = new IntersectionObserver((entradas) => {
 alvosReveal.forEach((el) => observador.observe(el));
 
 // ----- Formulário → WhatsApp -----
-// Troque pelo número real da Doces Maria Menina (DDI + DDD + número, só dígitos)
-const WHATSAPP_NUMERO = '5511999999999';
+// Troque pelo número real da Sol Sabores (DDI + DDD + número, só dígitos)
+const WHATSAPP_NUMERO = '5514997948739';
 
 document.getElementById('pedidoForm').addEventListener('submit', (e) => {
   e.preventDefault();
@@ -125,7 +125,7 @@ document.getElementById('pedidoForm').addEventListener('submit', (e) => {
   const tipo = dados.get('tipo') || '';
   const mensagem = dados.get('mensagem') || '';
 
-  let texto = `Olá, Doces Maria Menina! 🎂\n\nMeu nome é ${nome} e gostaria de fazer uma encomenda.\n`;
+  let texto = `Olá, Sol Sabores! 🎂\n\nMeu nome é ${nome} e gostaria de fazer uma encomenda.\n`;
   texto += `\n*O que desejo:* ${tipo}`;
   if (data) {
     const [ano, mes, dia] = data.split('-');
